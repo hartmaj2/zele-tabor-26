@@ -5,7 +5,7 @@ zakomponovat svacinu
 
 ## Debugging
 
-- predstavit si, ze jsem dite a snazim se vse ochat
+- predstavit si, ze jsem dite a snazim se vse ochcat
 
 - jak balancovat hru, kdyz se neco nevyvazi
 
@@ -14,7 +14,7 @@ zakomponovat svacinu
 - vlastnosti je potreba co nejvice zvelicit a udelat silene aby je straze pustili
 
 - nejaky tutorial
-  - priklad pasu a jak by se dal zahrat 
+  - priklad pasu a jak by se dal zahrat (co bych si musel vytvořit za fejky)
 
 - mozna mapka
 
