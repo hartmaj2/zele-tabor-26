@@ -13,7 +13,7 @@ Jednotlivé týmy budou mít za úkol projít hraniční (hradební) kontrolou p
 
 Z takto propašovaných zdrojů pak budou pomocí receptů vytvořit předměty, které jim pak pomůžou ve finálním boji. Buď poskytnou vylepšení jim (buff) nebo antivylepšení nepřátelům (debuff).
 
-Pro vstup bude potřeba použít průkazky s fotkou (tu si sami nakreslí) a popisem jejich identity. Tuto identitu budou muset věrohodně napodobit svým chováním a jejich nákres by měl odpovídat jejich vzhledu. Každá identita z průkazky bude mít nějakou nedokonalost (velký nos, prsa, zadek, uši, vousy, vypíchnuté oko, koktavost, záchvaty smíchu atd.) Pro seznam možných nedokonalostí viz. [Seznam nedokonalostí](./20%204.%20CTH%20-%20Vykr%C3%A1d%C3%A1n%C3%AD%20Hradu%20ve%20stylu%20Papers%20Please/Seznam%20nedokonalost%C3%AD.md)
+Pro vstup bude potřeba použít průkazky s fotkou (tu si sami nakreslí) a popisem jejich identity. Tuto identitu budou muset věrohodně napodobit svým chováním a jejich nákres by měl odpovídat jejich vzhledu. Každá identita z průkazky bude mít nějakou nedokonalost (velký nos, prsa, zadek, uši, vousy, vypíchnuté oko, koktavost, záchvaty smíchu atd.) Pro seznam možných nedokonalostí viz. [Seznam nedokonalostí](./imperfections.md)
 
 
 ---
@@ -121,7 +121,7 @@ Na základnách budou mít týmy připravené předlohy pasů. Dále zde budou n
 
 #### Pasy 🪪
 
-Pas je oboustranná papírová kartička formátu A6 s popisem osoby, kterou bude potřeba napodobit. Viz [Seznam nedokonalostí](./20%204.%20CTH%20-%20Vykr%C3%A1d%C3%A1n%C3%AD%20Hradu%20ve%20stylu%20Papers%20Please/Seznam%20nedokonalost%C3%AD.md)pro jednotlivé vlastnosti. Dále pas obsahuje místo na fotografii, tu musí hráči dokreslit. 
+Pas je oboustranná papírová kartička formátu A6 s popisem osoby, kterou bude potřeba napodobit. Viz [Seznam nedokonalostí](./imperfections.md) pro jednotlivé vlastnosti. Dále pas obsahuje místo na fotografii, tu musí hráči dokreslit. 
 
 #### Přední strana pasu
 
