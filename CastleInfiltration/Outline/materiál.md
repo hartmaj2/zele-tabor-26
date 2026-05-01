@@ -10,11 +10,13 @@
 
 ## Materiál pro hraniční kontrolu 👮🏻‍♂️
 
-* razítka
-* páska zákaz vstupu
+* razítka ❗
+* páska zákaz vstupu ❗
 * OPT: seznam s možnými otázkami na děti
 
 ## Výroba falešných pasů a nedokonalostí 🪪
+
+❗ bude potřeba 8 setů (pro každý tým jeden)
 
 ### Další zmíněné položky v textu
 
@@ -25,17 +27,17 @@
 * nůžky
 * propisky
 * tužky
-* bělítka
+* bělítka ❗
 * papíry
 
 ### Nástroje
 
-* make up sady
-* barvy na tělo
-* rtěnky
-* řasenky
-* silné nůžky
-* nůž na stříhání látky a kartonů
+* make up sady ❗
+* barvy na tělo ❗
+* rtěnky ❗
+* řasenky ❗
+* silné nůžky ❗
+* nůž na stříhání látky a kartonů ❗
 
 ### Spojovací materiály
 
@@ -48,10 +50,10 @@
 ### Materiály
 
 * noviny
-* látka
+* látka ❗
 * igelitové tašky
-* karton
-* krepáky
+* karton ❗
+* krepáky ❗
 
 ## Stanoviště 🛠️
 
@@ -60,7 +62,7 @@
 
 1. **Zatloukání hřebíků a řezání prken**
 
-* hřebíky
+* hřebíky ❗
 * kladivo
 * pilka
 * metr
@@ -69,22 +71,22 @@
 
 2. **Vytváření modelů z nanukových dřívek**
 
-* herkules
-* nanuková dřívka
+* herkules ❗
+* nanuková dřívka ❗
 
 ### Kovář
 
 
 1. **Vytváření kroužkové košile**
 
-* měděné kroužky
-* ocelové kroužky
+* měděné kroužky ❗
+* ocelové kroužky ❗
 * kleště
 
 
 2. **Ohýbání drátků do požadovaných tvarů**
 
-* kovové drátky
+* kovové drátky ❗
 * kleště
 
 ### Krejčí
@@ -93,7 +95,7 @@
 1. **Přišívání látek/knoflíků**
 
 * šitíčko (jehla, navlíkátko, nit)
-* látky a záplaty
+* látky a záplaty ❗
 * knoflíky
 
 
@@ -105,8 +107,8 @@
 
 3. **Namotání tkaničky**
 
-* stará bota
-* tkaničky
+* stará bota ❗
+* tkaničky ❗
 
 ### Pekař
 
@@ -120,9 +122,8 @@
 
 2. **Přesné vážení surovin**
 
-* dvouramenná váha
-* závaží
-* závažíčka
+* dvouramenná váha ❗
+* závažíčka ❗
 
 ### Účetní
 
