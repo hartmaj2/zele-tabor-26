@@ -27,6 +27,7 @@ import json
 import os
 import random
 import sys
+from datetime import datetime, timedelta
 
 
 # ── Výchozí cesty ──────────────────────────────────────────────────────────────
@@ -49,6 +50,27 @@ def random_date(year_from: int, year_to: int) -> str:
     max_day = calendar.monthrange(year, month)[1]
     day   = random.randint(1, max_day)
     return f"{day}.{month}.{year}"
+
+
+def random_expiration(expirace_config: dict, stav: str) -> str:
+    """
+    Vygeneruje datum expirace relativně k referenčnímu dni z data.json.
+
+    `stav`:
+      - "expirovane": 1 až max_dni_pred dní před aktuálním dnem
+      - "validni":    1 až max_dni_po dní po aktuálním dni
+    """
+    aktualni_datum = datetime.strptime(expirace_config["aktualni_datum"], "%d.%m.%Y")
+
+    if stav == "expirovane":
+        max_posun = expirace_config["max_dni_pred"]
+        delta = -random.randint(1, max_posun)
+    else:
+        max_posun = expirace_config["max_dni_po"]
+        delta = random.randint(1, max_posun)
+
+    expirace = aktualni_datum + timedelta(days=delta)
+    return f"{expirace.day}.{expirace.month}.{expirace.year}"
 
 
 def flatten_kategorie(znameni: dict) -> list[list[str]]:
@@ -81,7 +103,22 @@ def pick_znameni(flat_kategorie: list[list[str]], count: int) -> list[str]:
     return [random.choice(znaky) for znaky in selected]
 
 
-def generate_passport(data: dict, flat_kategorie: list[list[str]], cislo: int, znameni_count: int) -> dict:
+def pick_povolani(povolani_podle_suroviny: dict[str, list[str]]) -> tuple[str, str]:
+    """
+    Vybere surovinu a odpovídající povolání ze stejné skupiny.
+    """
+    surovina = random.choice(list(povolani_podle_suroviny.keys()))
+    povolani = random.choice(povolani_podle_suroviny[surovina])
+    return povolani, surovina
+
+
+def generate_passport(
+    data: dict,
+    flat_kategorie: list[list[str]],
+    cislo: int,
+    znameni_count: int,
+    expirace_stav: str,
+) -> dict:
     """
     Sestaví jeden náhodný pas.
 
@@ -90,6 +127,7 @@ def generate_passport(data: dict, flat_kategorie: list[list[str]], cislo: int, z
         flat_kategorie – plochý seznam podkategorií (výstup flatten_kategorie)
         cislo          – číslo pasu (použije se pro CTH-XXXX)
         znameni_count  – počet zvláštních znamení (1–3)
+        expirace_stav  – "expirovane" nebo "validni"
     """
     # Pohlaví určuje, ze které skupiny jmen a příjmení se vybírá
     pohlavi  = random.choice(["M", "F"])
@@ -101,8 +139,8 @@ def generate_passport(data: dict, flat_kategorie: list[list[str]], cislo: int, z
         data["datum_narozeni_rok_do"],
     )
 
-    expirace = random.choice(data["data_expirace"])
-    povolani = random.choice(data["povolani"])
+    expirace = random_expiration(data["expirace"], expirace_stav)
+    povolani, surovina = pick_povolani(data["povolani"])
     znameni  = pick_znameni(flat_kategorie, znameni_count)
 
     return {
@@ -112,6 +150,7 @@ def generate_passport(data: dict, flat_kategorie: list[list[str]], cislo: int, z
         "datum_narozeni": datum_narozeni,
         "expirace":       expirace,
         "povolani":       povolani,
+        "surovina":       surovina,
         "znameni":        znameni,
     }
 
@@ -135,6 +174,10 @@ def main():
         help="Počet zvláštních znamení na pas – 1, 2 nebo 3 (výchozí: 3).",
     )
     parser.add_argument(
+        "--expirace", default="validni", choices=["validni", "expirovane"], metavar="STAV",
+        help="Generovat validní nebo expirované pasy (výchozí: validni).",
+    )
+    parser.add_argument(
         "--output", default=OUTPUT_PATH, metavar="SOUBOR",
         help=f"Výstupní JSON soubor (výchozí: passports.json).",
     )
@@ -151,6 +194,37 @@ def main():
     with open(ZNAMENI_PATH, "r", encoding="utf-8") as f:
         kategorie = json.load(f)
 
+    expirace_config = data.get("expirace", {})
+    povolani_config = data.get("povolani", {})
+    required_keys = ["aktualni_datum", "max_dni_pred", "max_dni_po"]
+    missing_keys = [key for key in required_keys if key not in expirace_config]
+    if missing_keys:
+        sys.exit(
+            "[CHYBA] V data.json chybí konfigurace expirace: "
+            + ", ".join(missing_keys)
+        )
+
+    for key in ["max_dni_pred", "max_dni_po"]:
+        if not isinstance(expirace_config[key], int) or expirace_config[key] < 1:
+            sys.exit(f"[CHYBA] data.json -> expirace -> {key} musí být celé číslo >= 1.")
+
+    try:
+        datetime.strptime(expirace_config["aktualni_datum"], "%d.%m.%Y")
+    except ValueError:
+        sys.exit(
+            "[CHYBA] data.json -> expirace -> aktualni_datum musí mít formát D.M.RRRR "
+            "nebo DD.MM.RRRR."
+        )
+
+    if not isinstance(povolani_config, dict) or not povolani_config:
+        sys.exit("[CHYBA] data.json -> povolani musí být neprázdný objekt skupin surovin.")
+
+    for surovina, povolani_list in povolani_config.items():
+        if not isinstance(povolani_list, list) or not povolani_list:
+            sys.exit(
+                f"[CHYBA] data.json -> povolani -> {surovina} musí být neprázdný seznam povolání."
+            )
+
     # Převede vnořenou strukturu na plochý seznam podkategorií
     flat_kategorie = flatten_kategorie(kategorie)
 
@@ -162,11 +236,20 @@ def main():
         )
 
     # --- Generování pasů ------------------------------------------------------
-    print(f"Generuji {args.pocet} pas(ů) (znamení: {args.znameni}, start: CTH-{args.start:04d})…\n")
+    print(
+        f"Generuji {args.pocet} pas(ů) "
+        f"(znamení: {args.znameni}, expirace: {args.expirace}, start: CTH-{args.start:04d})…\n"
+    )
 
     passports = []
     for i in range(args.pocet):
-        passport = generate_passport(data, flat_kategorie, args.start + i, args.znameni)
+        passport = generate_passport(
+            data,
+            flat_kategorie,
+            args.start + i,
+            args.znameni,
+            args.expirace,
+        )
         passports.append(passport)
 
         expirace_str = passport["expirace"]

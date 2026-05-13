@@ -29,29 +29,34 @@
     ]
   },
 
-  "povolani": [
-    "Kovář",    "Truhlář",   "Kuchař",    "Pradlena",  "Zahradník",
-    "Malíř",    "Strážce",   "Obchodník", "Šašek",     "Krejčí",
-    "Mlynář",   "Rybář",     "Zlatník",   "Zedník",    "Tesař",
-    "Kolář",    "Bednář",    "Řezník",    "Pekař",     "Švec",
-    "Sklenář",  "Mydlář",    "Hrnčíř",   "Lazebník",  "Posel"
-  ],
+  "povolani": {
+    "dřevo": [
+      "Truhlář",
+      "Dřevorubec"
+    ],
+    "železo": [
+      "Kovář"
+    ],
+    "látka": [
+      "Krejčí",
+      "Švec"
+    ],
+    "jídlo": [
+      "Pekař",
+      "Cukrář"
+    ],
+    "vědomosti": [
+      "Účetní",
+      "Rádce"
+    ]
+  },
 
   "datum_narozeni_rok_od": 2010,
   "datum_narozeni_rok_do": 2020,
 
-  "data_expirace": [
-    "28.2.2026",
-    "31.3.2026",
-    "30.4.2026",
-    "30.6.2026",
-    "31.7.2026",
-    "31.7.2026",
-    "31.8.2026",
-    "31.8.2026",
-    "31.10.2026",
-    "31.12.2026",
-    "31.12.2027",
-    "31.12.2028"
-  ]
+  "expirace": {
+    "aktualni_datum": "13.5.2026",
+    "max_dni_pred": 10,
+    "max_dni_po": 120
+  }
 }
