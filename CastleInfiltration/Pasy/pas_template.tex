@@ -1,0 +1,170 @@
+% =====================================================================
+% Šablona pasu pro CTH - Infiltrace hradu
+% Formát: A6 (105 x 148 mm) - jedna strana = jedna A6 stránka
+% Kompilace: pdflatex pas_template.tex
+% =====================================================================
+\documentclass[10pt]{article}
+
+% --- Balíčky ---------------------------------------------------------
+\usepackage[a6paper,
+            top=4mm, bottom=4mm, left=4mm, right=4mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+
+\usetikzlibrary{calc}
+
+% --- Vypnout stránkování ---------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% --- Barvy -----------------------------------------------------------
+\definecolor{ramecek}{HTML}{8B0000}   % tmavě červená (Červená královna)
+\definecolor{popisek}{HTML}{555555}
+\definecolor{pozadi}{HTML}{FFF8F0}
+
+% =====================================================================
+% HARD-KÓDOVANÉ HODNOTY (později nahradit ze .json přes skript)
+% =====================================================================
+\newcommand{\pasJmeno}{Bartoloměj Křivohlávek}
+\newcommand{\pasPohlavi}{M}
+\newcommand{\pasDatumNarozeni}{14. 3. 1487}
+\newcommand{\pasExpirace}{31. 12. 1526}
+\newcommand{\pasPovolani}{Kovář}
+\newcommand{\pasVlastnostiA}{přerostlé obočí}
+\newcommand{\pasVlastnostiB}{chronický kašel}
+\newcommand{\pasVlastnostiC}{kulhání na pravou nohu}
+\newcommand{\pasCisloPasu}{CTH-0042}
+
+% =====================================================================
+\begin{document}
+
+% =====================================================================
+% PŘEDNÍ STRANA PASU
+% =====================================================================
+\begin{tikzpicture}[remember picture, overlay]
+  % Vnější rámeček po okraji stránky
+  \draw[ramecek, line width=1.2pt]
+    ($(current page.north west)+(3mm,-3mm)$) rectangle
+    ($(current page.south east)+(-3mm,3mm)$);
+  % Vnitřní tenký rámeček
+  \draw[ramecek, line width=0.3pt]
+    ($(current page.north west)+(5mm,-5mm)$) rectangle
+    ($(current page.south east)+(-5mm,5mm)$);
+\end{tikzpicture}
+
+% --- Hlavička --------------------------------------------------------
+\begin{center}
+  {\fontsize{14}{16}\selectfont\bfseries\color{ramecek} KRÁLOVSTVÍ ČERVENÉ KRÁLOVNY}\\[1pt]
+  {\fontsize{18}{20}\selectfont\bfseries P A S}\\[-2pt]
+  {\scriptsize\color{popisek}\textit{Cestovní průkaz poddaného}}
+\end{center}
+
+\vspace{-2mm}
+\noindent\textcolor{ramecek}{\rule{\linewidth}{0.4pt}}
+\vspace{1mm}
+
+% --- Fotka + údaje ---------------------------------------------------
+\noindent
+\begin{minipage}[t]{34mm}
+  \vspace{0pt}
+  % Místo na fotografii - rámeček s textem
+  \begin{tikzpicture}
+    \draw[ramecek, dashed, line width=0.6pt] (0,0) rectangle (32mm, 40mm);
+    \node[align=center, color=popisek, font=\scriptsize\itshape]
+      at (16mm, 20mm) {fotografie\\(dokresli)};
+  \end{tikzpicture}\\[1mm]
+  {\centering\scriptsize\color{popisek} č. pasu: \pasCisloPasu\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{55mm}
+  \vspace{0pt}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabularx}{\linewidth}{@{}l X@{}}
+    {\scriptsize\color{popisek} Jméno:}    & \small\bfseries \pasJmeno \\
+    {\scriptsize\color{popisek} Pohlaví:}  & \small\bfseries \pasPohlavi \\
+    {\scriptsize\color{popisek} Nar.:}     & \small \pasDatumNarozeni \\
+    {\scriptsize\color{popisek} Expirace:} & \small \pasExpirace \\
+    {\scriptsize\color{popisek} Povolání:} & \small\bfseries \pasPovolani \\
+  \end{tabularx}
+\end{minipage}
+
+\vspace{3mm}
+\noindent\textcolor{ramecek}{\rule{\linewidth}{0.3pt}}
+
+% --- Zvláštní znamení (nedokonalosti) --------------------------------
+\vspace{1mm}
+\noindent{\scriptsize\bfseries\color{ramecek} ZVLÁŠTNÍ ZNAMENÍ / NEDOKONALOSTI}\\[1mm]
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}\setlength{\leftmargin}{4mm}
+  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiA
+  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiB
+  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiC
+\end{itemize}
+
+\vfill
+\begin{center}\scriptsize\itshape\color{popisek}
+  Platné pouze s razítkem hraniční kontroly.
+\end{center}
+
+% =====================================================================
+% ZADNÍ STRANA PASU
+% =====================================================================
+\newpage
+
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[ramecek, line width=1.2pt]
+    ($(current page.north west)+(3mm,-3mm)$) rectangle
+    ($(current page.south east)+(-3mm,3mm)$);
+  \draw[ramecek, line width=0.3pt]
+    ($(current page.north west)+(5mm,-5mm)$) rectangle
+    ($(current page.south east)+(-5mm,5mm)$);
+\end{tikzpicture}
+
+% --- Razítko ---------------------------------------------------------
+\begin{center}
+  {\scriptsize\bfseries\color{ramecek} HRANIČNÍ KONTROLA}\\[1mm]
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw[ramecek, dashed, line width=0.6pt] (0,0) circle (16mm);
+    \node[align=center, color=popisek, font=\scriptsize\itshape] at (0,0) {místo\\na razítko};
+  \end{tikzpicture}
+\end{center}
+
+\vspace{1mm}
+\noindent\textcolor{ramecek}{\rule{\linewidth}{0.3pt}}
+
+% --- Batoh -----------------------------------------------------------
+\vspace{1mm}
+\begin{center}
+  {\scriptsize\bfseries\color{ramecek} BATOH \,\textnormal{\scriptsize\itshape\color{popisek}(nalep suroviny)}}
+\end{center}
+
+\vspace{1mm}
+\begin{center}
+  \begin{tikzpicture}
+    % 6 čtvercových políček v gridu 3 sloupce x 2 řádky
+    % Velikost políčka 22 mm, mezera 2 mm
+    \foreach \r in {0,1} {
+      \foreach \c in {0,1,2} {
+        \draw[ramecek, line width=0.6pt]
+          ({\c*24mm}, {-\r*24mm}) rectangle ({\c*24mm + 22mm}, {-\r*24mm - 22mm});
+      }
+    }
+  \end{tikzpicture}
+\end{center}
+
+\vfill
+\begin{center}\scriptsize\itshape\color{popisek}
+  Suroviny mimo batoh budou na hranici zabaveny.
+\end{center}
+
+\end{document}
