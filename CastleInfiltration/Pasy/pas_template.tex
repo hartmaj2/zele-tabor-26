@@ -23,6 +23,10 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
+% Přepínač: true = kompiluj obě strany, false = jen přední
+% Skript render_pasy.py nastaví na false automaticky.
+\newif\ifzadniStrana \zadniStranatrue
+
 
 % #####################################################################
 % #                                                                   #
@@ -239,6 +243,7 @@
 \end{center}
 
 
+\ifzadniStrana
 % =====================================================================
 % ZADNÍ STRANA
 % =====================================================================
@@ -293,5 +298,7 @@
 \begin{center}\fontPoznamka\itshape\color{popisek}
   Suroviny mimo batoh budou na hranici zabaveny.
 \end{center}
+
+\fi % ifzadniStrana
 
 \end{document}

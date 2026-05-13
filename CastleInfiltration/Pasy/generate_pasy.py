@@ -71,7 +71,8 @@ def substitute_values(template: str, passport: dict) -> str:
         "pasCisloPasu":     passport["cislo_pasu"],
     }
 
-    result = template
+    # Skript generuje pouze přední stranu
+    result = template.replace(r"\zadniStranatrue", r"\zadniStranafalse")
 
     for cmd_name, new_value in mapping.items():
         # Regex: najde \newcommand{\<cmd_name>}{<cokoliv>}
