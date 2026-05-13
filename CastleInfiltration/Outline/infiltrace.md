@@ -1,11 +1,11 @@
-# 🏰 20 4. CTH - Vykrádání Hradu ve stylu Papers Please
+# 🏰 20 4. CTH - Infiltrace hradu
 
 * **Fyzická zátěž:** 2
 
 
 * **Psychická zátěž:** 5
 * **Čas na hru:** ⏳ - 2
-* **Instruktoři na hru:** 👤 - ❗
+* **Instruktoři na hru:** 👤 - viz [lokality](https://outline.hydrantzovoce.org/doc/20-4-cth-infiltrace-hradu-rIxQXEhMNb#h-lokality-🗺️)
 
 ## Cíl 🎯
 
@@ -13,7 +13,7 @@ Jednotlivé týmy budou mít za úkol projít hraniční (hradební) kontrolou p
 
 Z takto propašovaných zdrojů pak budou pomocí receptů vytvořit předměty, které jim pak pomůžou ve finálním boji. Buď poskytnou vylepšení jim (buff) nebo antivylepšení nepřátelům (debuff).
 
-Pro vstup bude potřeba použít průkazky s fotkou (tu si sami nakreslí) a popisem jejich identity. Tuto identitu budou muset věrohodně napodobit svým chováním a jejich nákres by měl odpovídat jejich vzhledu. Každá identita z průkazky bude mít nějakou nedokonalost (velký nos, prsa, zadek, uši, vousy, vypíchnuté oko, koktavost, záchvaty smíchu atd.) Pro seznam možných nedokonalostí viz. [Seznam nedokonalostí](./imperfections.md)
+Pro vstup bude potřeba použít průkazky s fotkou (tu si sami nakreslí) a popisem jejich identity. Tuto identitu budou muset věrohodně napodobit svým chováním a jejich nákres by měl odpovídat jejich vzhledu. Každá identita z průkazky bude mít nějakou nedokonalost (velký nos, prsa, zadek, uši, vousy, vypíchnuté oko, koktavost, záchvaty smíchu atd.) Pro seznam možných nedokonalostí viz. [Seznam nedokonalostí](/doc/89eaa7ea-c01e-4a14-bfa0-5dc782524d2f)
 
 
 ---
@@ -27,17 +27,22 @@ Hraniční kontrola a kradení zdrojů z hradu.
 * **Fyzická zátěž:** 2
 * **Psychická zátěž:** 5
 * **Čas na přípravu:** Doba potřebná pro organizátory na přípravu hry v terénu.
+* **Dětí ve hře:** cca 120
 * **Instr. na přípravu:** Počet instruktorů nutných pro přípravu. (co je potřeba připravit předem a kdy)
 * **Čas na hru:** 9:30 - 11:50, 20 minut na vysvětlení a rozestavení, cca 90 minut čistého času hry, 10 minut na závěr (+ 20 minut rezerva)
 * **Instr. na hru:** celkem máme 12 vedoucích + Danča + Mára + Mája + možná 2 praktikanti
 * **Prostředí:** Hraje se na dvou loukách. Základny jednotlivých týmů budou na louce s bazénem. Hranice vedou podél silnice, která se táhne ve směru delšího ramena budovy dále. Hrad je louka na druhé straně této silnice.
 
-### Materiál
+## Materiál 📦
 
-* [razítka](https://www.odkarla.cz/razitko-patikil-rejected-samonapousteci-cerveny-inkoust-kancelarska-razitka-predem-napustene\~p1898198?utm_content=1898198&gad_source=1&gad_campaignid=21083066073&gbraid=0AAAAADOwWw1MWnjxY8WdxYR0ZE5rSyYy2&gclid=CjwKCAjw14zPBhAuEiwAP3-Eb0tbDhm70hm9KfEtcUM1Mt6rrUnz9AmgzFEjB8o6cGpZO7cXmpF5ohoCwLUQAvD_BwE)
+Detailněji viz[Rozpis materiálu dle funkce](/doc/e2617257-9592-4e19-8b26-14b71440850c)
+
+**Především sehnat:**
+
+* razítka - approved a rejected
 * páska zákaz vstupu
-* make up sady
-* bělítka (na fejkování pasů)
+* materiály na fejkování kostýmů a úpravu pasů
+* materiály na jednotlivá pracoviště
 
 
 ---
@@ -69,7 +74,7 @@ Areál z ptačí perspektivy: <https://maps.app.goo.gl/GyQwfHCkwpuuc5Ps9>
 * hraniční namátková stráž - 1x (1 vedoucí)
 * pracoviště uvnitř hradu - 5x (5 vedoucích)
 
-❗TODO: připravit mapu dle satelitního snímku tábora z Mapy.cz
+ ![](https://outline.hydrantzovoce.org/api/files.get?sig=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJ1cGxvYWRzLzZhNmY4MTU2LWE0NWItNGZlNC05OWVlLTFmNDllN2I1ZjNlMC8xZTU1NzkzNC00NDkzLTQ1MWQtYmUyOS0wMDMyM2M0YTlhNmIvbWFwYS5qcGVnIiwidHlwZSI6ImF0dGFjaG1lbnQiLCJpYXQiOjE3Nzg2NjI3MjUsImV4cCI6MTc3OTI2NzUyNX0.syxxXFiDdtBHj5uZjIdmYmudKZToX75WedvZEojeAbs " =905x841")
 
 
 ---
@@ -121,7 +126,7 @@ Na základnách budou mít týmy připravené předlohy pasů. Dále zde budou n
 
 #### Pasy 🪪
 
-Pas je oboustranná papírová kartička formátu A6 s popisem osoby, kterou bude potřeba napodobit. Viz [Seznam nedokonalostí](./imperfections.md) pro jednotlivé vlastnosti. Dále pas obsahuje místo na fotografii, tu musí hráči dokreslit. 
+Pas je oboustranná papírová kartička formátu A6 s popisem osoby, kterou bude potřeba napodobit. Viz [Seznam nedokonalostí](/doc/89eaa7ea-c01e-4a14-bfa0-5dc782524d2f)pro jednotlivé vlastnosti. Dále pas obsahuje místo na fotografii, tu musí hráči dokreslit. 
 
 #### Přední strana pasu
 
@@ -131,10 +136,10 @@ Pas je oboustranná papírová kartička formátu A6 s popisem osoby, kterou bud
 * **datum narození** - teoreticky tam můžou být věky dětí a budou ho muset zhruba trefit
 * **expirace pasu** - pas nesmí být expirován (pokud si děti všimnou, že expiroval a přepíší to datum, tak uznáváme)
 * **povolání** - to by mohlo určovat, na jaké pracoviště může daná postava jít pracovat
-* **místo na razítko** - pokud bude hráč dostatečně přesvědčivý, dostane na toto místo razítko APPROVED, jinak REJECTED
 
 #### Zadní strana pasu
 
+* **místo na razítko** - pokud bude hráč dostatečně přesvědčivý, dostane na toto místo razítko APPROVED, jinak REJECTED
 * obsahuje tzv. **batoh** - omezený počet políček, na které si děti mohou lepit získané suroviny, jinak než v batohu děti suroviny nosit nemohou (hraniční kontrola toto bude důsledně kontrolovat!) 
 
 ### Průchod hraniční kontrolou 🛂
@@ -202,7 +207,7 @@ Aktivity:
 * vytvořit z kovových kroužků chainmail o počtu kroužku n
 * hledání lesklého kamene v kyblících
 
-Materiál: měděné/ocelové kroužky (od klíčů), kleště, kovové dráty?
+Materiál: měděné/ocelové kroužky (od klíčů), kleště, kovové dráty
 
 #### III. Krejčí 
 
@@ -217,7 +222,7 @@ Aktivita pro mladší:
 * rozmotání uzlu
 * namotání tkaničky
 
-Materiál: šitíčko, látky, provázky/provazy, tkaničky
+Materiál: šitíčko, knoflíky, látky, provázky/provazy, tkaničky
 
 #### IV. Pekař 
 
@@ -243,7 +248,7 @@ Aktivity pro mladší:
 
 * kolik je na obrázku věcí (kostky zlata, trezory, bankovky), supr lehký příklad (sčítání) 
 
-Materiál: propisky, tužky, papíry, vytisknuté předlohy
+Materiál: propisky, tužky, papíry na mezivýpočty, vytisknuté předlohy
 
 
 ---
@@ -257,22 +262,14 @@ Opustit hrad může dítě kdykoliv. Pro opuštění hradu bude vyhrazena jedna 
 
 * na stanovištích dětí zůstane spoustu bordelu, takže to bude potřeba uklidit, nejlépe to delegovat na jednotlivé týmy, ať zapojíme děcka do práce
 
-## Otázky Fíla ❓
-
-- [x] hranice do hradu
-  - [x] jak dlouhá může být hranice a jak ji postavit (zakáz vstupu páska)
-- [x] minihry 
-  - [x] jsou aktivity jako práce  jehlou, kladivem a hřebíky moc nebezpečné?
-  - [x] co všechno by se dalo opatřit za materiál (prkna na zatloukání/řezání, hřebíky a kladivo)
-
 ## TODOs ❗❗❗
 
 - [x] kouknout se na areál v Mapy.cz
-- [ ] zjistit, co přesně bude potřeba objednat a kolik kusů (budget cca 1000 Kč)
-  - [ ] věci na vytváření falešných identit (zeptat se Kačky na make up sady atp.)
+- [x] zjistit, co přesně bude potřeba objednat a kolik kusů (budget cca 1000 Kč)
+  - [x] věci na vytváření falešných identit (zeptat se Kačky na make up sady atp.)
   - [ ] co půjde půjčit od Fíly (rovnoramenná váha?, pilka, metr, kleštičky, kleště a kovové dráty)
-  - [ ] co je určitě potřeba objednat dostatečně dopředu (páska zákaz vstupu, měděné kroužky, make up sady, látky, dřívka nanuková)
-  - [ ] kolik to bude cca stát
+  - [x] co je určitě potřeba objednat dostatečně dopředu (páska zákaz vstupu, měděné kroužky, make up sady, látky, dřívka nanuková)
+  - [x] kolik to bude cca stát
 - [ ] vyrobit template v latexu na pasy
   * A6 oboustranně, 4 pasy na jednu stránku přesně fitovat, aby bylo jednoduché stříhání
   * přední strana - fotka a místo na razítko
