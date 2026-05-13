@@ -42,7 +42,6 @@
 \newcommand{\fontHlavickaPas}{\fontsize{16}{18}\selectfont}     % "PAS"
 \newcommand{\fontHlavickaPodnadpis}{\scriptsize}                % "Cestovní průkaz poddaného"
 \newcommand{\fontSekceTitulek}{\small}                          % ZVLÁŠTNÍ ZNAMENÍ, HRANIČNÍ KONTROLA
-\newcommand{\fontBatohTitulek}{\scriptsize}                     % BATOH
 \newcommand{\fontPolePopisek}{\scriptsize}                      % "jméno", "pohlaví", ...
 \newcommand{\fontPoleHodnota}{\small}                           % vlastní hodnota pole
 \newcommand{\fontPoznamka}{\scriptsize}                         % patičkové texty
@@ -61,14 +60,14 @@
 \newcommand{\fotoSirka}{31mm}            % šířka samotné fotky
 \newcommand{\fotoVyska}{40mm}            % výška samotné fotky
 \newcommand{\fotoRamOdsazeni}{0.6mm}     % šířka zlatého proužku kolem fotky
+\newcommand{\fotoLevyOdstup}{5.5mm}      % odsazení fotky zleva (aby levý okraj lícoval s dělicí čarou)
+\newcommand{\fotoDataMezera}{3mm}        % mezera mezi pravým okrajem fotky a začátkem dat
+% Pozn.: fotoLevyOdstup + fotoSloupecSirka + fotoDataMezera + dataSloupecSirka = 91 mm (textová šířka A6)
 
 % --- 5) Datový sloupec (jméno, pohlaví, ...) -------------------------
-\newcommand{\dataSloupecSirka}{55mm}     % šířka pravého sloupce s údaji
-\newcommand{\dataLevySloupec}{25mm}      % šířka levého pole ve dvojici (pohlaví / nar.)
-\newcommand{\dataPravySloupec}{28mm}     % šířka pravého pole (povolání / expirace)
-% Pozn.: \hfill mezi nimi dorovná zbývající mezeru.
-\newcommand{\dataMezeraPoPoli}{1mm}    % svislá mezera za každým polem
-\newcommand{\dataMezeraNadHodnotou}{-0.5mm} % mezera mezi popiskem a hodnotou
+\newcommand{\dataSloupecSirka}{49.5mm}      % šířka pravého sloupce s údaji
+\newcommand{\dataMezeraNadHodnotou}{-0.5mm}  % mezera mezi popiskem a hodnotou
+\newcommand{\dataMezeraMeziPoli}{1.5mm}      % mezera mezi poli (jednotná pro vše)
 
 % --- 6) Dělící linka --------------------------------------------------
 \newcommand{\delicLinkaDelka}{38mm}      % délka jedné poloviny linky
@@ -84,11 +83,11 @@
 \newcommand{\batohRamOdsazeni}{0.5mm}    % zlatý proužek kolem buňky
 
 % --- 9) Globální svislé mezery ---------------------------------------
-\newcommand{\mezeraPredHlavickou}{1mm}
-\newcommand{\mezeraPoHlavicce}{1mm}
-\newcommand{\mezeraPredZnamenim}{4mm}
-\newcommand{\mezeraPredRazitkem}{1mm}
-\newcommand{\mezeraPredBatohem}{2mm}
+\newcommand{\mezeraPredHlavickou}{0mm}
+\newcommand{\mezeraPoHlavicce}{0mm}
+\newcommand{\mezeraPredZnamenim}{0mm}
+\newcommand{\mezeraPredRazitkem}{0mm}
+\newcommand{\mezeraPredBatohem}{0mm}
 
 
 % #####################################################################
@@ -157,7 +156,7 @@
   {\fontPolePopisek\color{popisek}\textsc{#1}}\par
   \vspace{\dataMezeraNadHodnotou}%
   {\fontPoleHodnota\bfseries\color{cernarudna} #2}\par
-  \vspace{\dataMezeraPoPoli}%
+  \vspace{\dataMezeraMeziPoli}%
 }
 
 
@@ -186,7 +185,7 @@
 \vspace{\mezeraPoHlavicce}
 
 % --- Fotka + údaje ---------------------------------------------------
-\noindent
+\noindent\hspace*{\fotoLevyOdstup}%
 \begin{minipage}[t]{\fotoSloupecSirka}
   \vspace{0pt}
   \begin{tikzpicture}
@@ -200,29 +199,21 @@
       at ($(0,0)!0.5!(\fotoSirka,\fotoVyska)$) {fotografie\\(dokresli)};
   \end{tikzpicture}\\[2mm]
   {\centering\fontPoznamka\color{popisek}č.~pasu: \textbf{\pasCisloPasu}\par}
-\end{minipage}\hfill
+\end{minipage}\hspace{\fotoDataMezera}%
 \begin{minipage}[t]{\dataSloupecSirka}
-  \vspace{-1mm}
+  \vspace{0pt}
   \polePas{jméno}{\pasJmeno}
-  \begin{minipage}[t]{\dataLevySloupec}
-    \polePas{pohlaví}{\pasPohlavi}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{\dataPravySloupec}
-    \polePas{povolání}{\textcolor{ramecek}{\pasPovolani}}
-  \end{minipage}\par
-  \begin{minipage}[t]{\dataLevySloupec}
-    \polePas{nar.}{\pasDatumNarozeni}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{\dataPravySloupec}
-    \polePas{expirace}{\pasExpirace}
-  \end{minipage}
+  \polePas{pohlaví}{\pasPohlavi}
+  \polePas{povolání}{\textcolor{ramecek}{\pasPovolani}}
+  \polePas{nar.}{\pasDatumNarozeni}
+  \polePas{expirace}{\pasExpirace}
 \end{minipage}
 
 \vspace{\mezeraPredZnamenim}
 \pasDelic
 
 % --- Zvláštní znamení (nedokonalosti) --------------------------------
-\vspace{1mm}
+% \vspace{1mm}
 \begin{center}
   {\fontSekceTitulek\bfseries\color{ramecek} ZVLÁŠTNÍ ZNAMENÍ}
 \end{center}
@@ -263,10 +254,9 @@
 \pasDelic
 
 % --- Batoh -----------------------------------------------------------
-\vspace{1mm}
+% \vspace{1mm}
 \begin{center}
-  {\fontBatohTitulek\bfseries\color{ramecek} BATOH}\,
-  {\fontBatohTitulek\itshape\color{popisek}(nalep suroviny)}
+  {\fontSekceTitulek\bfseries\color{ramecek} BATOH}\
 \end{center}
 
 \vspace{1mm}
