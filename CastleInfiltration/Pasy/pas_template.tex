@@ -18,26 +18,28 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{microtype}
-\usepackage{fontawesome5}
+\usepackage{amssymb}
+\usepackage{eso-pic}
 
 \usetikzlibrary{calc}
 
-% --- Vypnout stránkování ---------------------------------------------
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
-% --- Barvy -----------------------------------------------------------
-\definecolor{ramecek}{HTML}{8B0000}   % tmavě červená (Červená královna)
-\definecolor{popisek}{HTML}{555555}
-\definecolor{pozadi}{HTML}{FFF8F0}
+% --- Barevná paleta (Červená královna / hrací karty) -----------------
+\definecolor{ramecek}{HTML}{A40A1F}    % hluboká karmínová
+\definecolor{akcent}{HTML}{D4AF37}     % zlatá
+\definecolor{cernarudna}{HTML}{2B0A0F}
+\definecolor{popisek}{HTML}{6B4A4A}
+\definecolor{vodoznak}{HTML}{F7DEE2}   % velmi světlý růžový pro watermark
 
 % =====================================================================
 % HARD-KÓDOVANÉ HODNOTY (později nahradit ze .json přes skript)
 % =====================================================================
 \newcommand{\pasJmeno}{Bartoloměj Křivohlávek}
 \newcommand{\pasPohlavi}{M}
-\newcommand{\pasDatumNarozeni}{14. 3. 1487}
-\newcommand{\pasExpirace}{31. 12. 1526}
+\newcommand{\pasDatumNarozeni}{14.\,3.\,1487}
+\newcommand{\pasExpirace}{31.\,12.\,1526}
 \newcommand{\pasPovolani}{Kovář}
 \newcommand{\pasVlastnostiA}{přerostlé obočí}
 \newcommand{\pasVlastnostiB}{chronický kašel}
@@ -45,67 +47,91 @@
 \newcommand{\pasCisloPasu}{CTH-0042}
 
 % =====================================================================
+% Dekorativní pozadí (rámeček + vodoznak + rohové ornamenty)
+% Kreslí se přes celou FYZICKOU stránku přes eso-pic.
+% =====================================================================
+\AddToShipoutPictureBG{%
+  \begin{tikzpicture}[overlay, remember picture]
+    % Souřadnice (0,0) = levý dolní roh papíru
+    % Posunout vše do levého dolního rohu papíru:
+    \begin{scope}[shift={(current page.south west)}]
+      % --- Vodoznak: velké světlé srdce uprostřed ---------------------
+      \node[color=vodoznak] at (0.5\paperwidth, 0.5\paperheight)
+        {\fontsize{120}{120}\selectfont$\heartsuit$};
+      % --- Vnější silný karmínový rámeček -----------------------------
+      \draw[ramecek, line width=1.6pt]
+        (2.5mm, 2.5mm) rectangle
+        ($(\paperwidth, \paperheight)+(-2.5mm,-2.5mm)$);
+      % --- Zlatý prostřední rámeček -----------------------------------
+      \draw[akcent, line width=0.6pt]
+        (4mm, 4mm) rectangle
+        ($(\paperwidth, \paperheight)+(-4mm,-4mm)$);
+      % --- Vnitřní tenký karmínový rámeček ----------------------------
+      \draw[ramecek, line width=0.3pt]
+        (5mm, 5mm) rectangle
+        ($(\paperwidth, \paperheight)+(-5mm,-5mm)$);
+      % --- Rohové ornamenty: srdíčka ----------------------------------
+      \node[color=ramecek] at (7.5mm, \paperheight-7.5mm) {$\heartsuit$};
+      \node[color=ramecek] at (\paperwidth-7.5mm, \paperheight-7.5mm) {$\heartsuit$};
+      \node[color=ramecek] at (7.5mm, 7.5mm) {$\heartsuit$};
+      \node[color=ramecek] at (\paperwidth-7.5mm, 7.5mm) {$\heartsuit$};
+    \end{scope}
+  \end{tikzpicture}%
+}
+
+% --- Dělící linka s ornamentem ---------------------------------------
+\newcommand{\pasDelic}{%
+\begin{center}
+\begin{tikzpicture}
+  \draw[ramecek, line width=0.4pt] (0,0) -- (38mm,0);
+  \node[color=ramecek, fill=white, inner sep=1pt] at (40mm,0) {\small$\heartsuit$};
+  \draw[ramecek, line width=0.4pt] (42mm,0) -- (80mm,0);
+\end{tikzpicture}
+\end{center}%
+}
+
+% =====================================================================
 \begin{document}
 
 % =====================================================================
-% PŘEDNÍ STRANA PASU
+% PŘEDNÍ STRANA
 % =====================================================================
-\begin{tikzpicture}[remember picture, overlay]
-  % Vnější rámeček po okraji stránky
-  \draw[ramecek, line width=1.2pt]
-    ($(current page.north west)+(3mm,-3mm)$) rectangle
-    ($(current page.south east)+(-3mm,3mm)$);
-  % Vnitřní tenký rámeček
-  \draw[ramecek, line width=0.3pt]
-    ($(current page.north west)+(5mm,-5mm)$) rectangle
-    ($(current page.south east)+(-5mm,5mm)$);
-\end{tikzpicture}
-
-% --- Hlavička --------------------------------------------------------
-\begin{center}
-  {\fontsize{14}{16}\selectfont\bfseries\color{ramecek} KRÁLOVSTVÍ ČERVENÉ KRÁLOVNY}\\[1pt]
-  {\fontsize{18}{20}\selectfont\bfseries P A S}\\[-2pt]
-  {\scriptsize\color{popisek}\textit{Cestovní průkaz poddaného}}
-\end{center}
-
-\vspace{-2mm}
-\noindent\textcolor{ramecek}{\rule{\linewidth}{0.4pt}}
-\vspace{1mm}
+\vspace*{2mm}
 
 % --- Fotka + údaje ---------------------------------------------------
 \noindent
 \begin{minipage}[t]{34mm}
   \vspace{0pt}
-  % Místo na fotografii - rámeček s textem
   \begin{tikzpicture}
-    \draw[ramecek, dashed, line width=0.6pt] (0,0) rectangle (32mm, 40mm);
+    \draw[akcent, line width=1pt] (-0.6mm,0.6mm) rectangle (32.6mm, 40.6mm);
+    \draw[ramecek, dashed, line width=0.5pt] (0,0) rectangle (32mm, 40mm);
     \node[align=center, color=popisek, font=\scriptsize\itshape]
       at (16mm, 20mm) {fotografie\\(dokresli)};
-  \end{tikzpicture}\\[1mm]
-  {\centering\scriptsize\color{popisek} č. pasu: \pasCisloPasu\par}
+  \end{tikzpicture}\\[2mm]
+  {\centering\scriptsize\color{popisek}č.~pasu: \textbf{\pasCisloPasu}\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{55mm}
   \vspace{0pt}
-  \renewcommand{\arraystretch}{1.25}
+  \renewcommand{\arraystretch}{1.3}
   \begin{tabularx}{\linewidth}{@{}l X@{}}
-    {\scriptsize\color{popisek} Jméno:}    & \small\bfseries \pasJmeno \\
-    {\scriptsize\color{popisek} Pohlaví:}  & \small\bfseries \pasPohlavi \\
-    {\scriptsize\color{popisek} Nar.:}     & \small \pasDatumNarozeni \\
-    {\scriptsize\color{popisek} Expirace:} & \small \pasExpirace \\
-    {\scriptsize\color{popisek} Povolání:} & \small\bfseries \pasPovolani \\
+    {\scriptsize\color{popisek}\textsc{jméno}}    & \small\bfseries\color{cernarudna} \pasJmeno \\
+    {\scriptsize\color{popisek}\textsc{pohlaví}}  & \small\bfseries \pasPohlavi \\
+    {\scriptsize\color{popisek}\textsc{nar.}}     & \small \pasDatumNarozeni \\
+    {\scriptsize\color{popisek}\textsc{expirace}} & \small \pasExpirace \\
+    {\scriptsize\color{popisek}\textsc{povolání}} & \small\bfseries\color{ramecek} \pasPovolani \\
   \end{tabularx}
 \end{minipage}
 
-\vspace{3mm}
-\noindent\textcolor{ramecek}{\rule{\linewidth}{0.3pt}}
+\vspace{4mm}
+\pasDelic
 
 % --- Zvláštní znamení (nedokonalosti) --------------------------------
 \vspace{1mm}
-\noindent{\scriptsize\bfseries\color{ramecek} ZVLÁŠTNÍ ZNAMENÍ / NEDOKONALOSTI}\\[1mm]
-\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}\setlength{\leftmargin}{4mm}
-  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiA
-  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiB
-  \item[\textcolor{ramecek}{$\bullet$}] \pasVlastnostiC
+\noindent{\scriptsize\bfseries\color{ramecek}\textsc{Zvláštní znamení}}\\[1mm]
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\topsep}{0pt}\setlength{\leftmargin}{5mm}
+  \item[\textcolor{akcent}{$\blacklozenge$}] \pasVlastnostiA
+  \item[\textcolor{akcent}{$\blacklozenge$}] \pasVlastnostiB
+  \item[\textcolor{akcent}{$\blacklozenge$}] \pasVlastnostiC
 \end{itemize}
 
 \vfill
@@ -114,49 +140,45 @@
 \end{center}
 
 % =====================================================================
-% ZADNÍ STRANA PASU
+% ZADNÍ STRANA
 % =====================================================================
 \newpage
-
-\begin{tikzpicture}[remember picture, overlay]
-  \draw[ramecek, line width=1.2pt]
-    ($(current page.north west)+(3mm,-3mm)$) rectangle
-    ($(current page.south east)+(-3mm,3mm)$);
-  \draw[ramecek, line width=0.3pt]
-    ($(current page.north west)+(5mm,-5mm)$) rectangle
-    ($(current page.south east)+(-5mm,5mm)$);
-\end{tikzpicture}
-
-% --- Razítko ---------------------------------------------------------
+\vspace*{2mm}
 \begin{center}
-  {\scriptsize\bfseries\color{ramecek} HRANIČNÍ KONTROLA}\\[1mm]
+  {\scriptsize\bfseries\color{ramecek}\textsc{Hraniční kontrola}}
 \end{center}
 
+\vspace{1mm}
+% --- Razítko ---------------------------------------------------------
 \begin{center}
   \begin{tikzpicture}
+    \draw[akcent, line width=0.8pt] (0,0) circle (16.8mm);
     \draw[ramecek, dashed, line width=0.6pt] (0,0) circle (16mm);
     \node[align=center, color=popisek, font=\scriptsize\itshape] at (0,0) {místo\\na razítko};
   \end{tikzpicture}
 \end{center}
 
-\vspace{1mm}
-\noindent\textcolor{ramecek}{\rule{\linewidth}{0.3pt}}
+\vspace{2mm}
+\pasDelic
 
 % --- Batoh -----------------------------------------------------------
 \vspace{1mm}
 \begin{center}
-  {\scriptsize\bfseries\color{ramecek} BATOH \,\textnormal{\scriptsize\itshape\color{popisek}(nalep suroviny)}}
+  {\scriptsize\bfseries\color{ramecek}\textsc{Batoh}}\,
+  {\scriptsize\itshape\color{popisek}(nalep suroviny)}
 \end{center}
 
 \vspace{1mm}
 \begin{center}
   \begin{tikzpicture}
-    % 6 čtvercových políček v gridu 3 sloupce x 2 řádky
-    % Velikost políčka 22 mm, mezera 2 mm
     \foreach \r in {0,1} {
       \foreach \c in {0,1,2} {
-        \draw[ramecek, line width=0.6pt]
-          ({\c*24mm}, {-\r*24mm}) rectangle ({\c*24mm + 22mm}, {-\r*24mm - 22mm});
+        \draw[akcent, line width=0.6pt]
+          ({\c*24mm - 0.5mm}, {-\r*24mm + 0.5mm}) rectangle
+          ({\c*24mm + 22.5mm}, {-\r*24mm - 22.5mm});
+        \draw[ramecek, line width=0.5pt]
+          ({\c*24mm}, {-\r*24mm}) rectangle
+          ({\c*24mm + 22mm}, {-\r*24mm - 22mm});
       }
     }
   \end{tikzpicture}
