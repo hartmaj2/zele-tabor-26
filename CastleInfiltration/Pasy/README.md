@@ -13,6 +13,10 @@ Pasy používají LaTeXovou šablonu `pas_template.tex` do které se pak pomocí
     - LaTeX commandy, které se pak propíšou do odpovídajících políček
     - důležité je, že pokud zůstanou prázdné některé ze tří atributů, tak to nevadí (postará se o to command ZnameniItem)
 
+- programátorsky důležitý je přepínač `\newif\ifzadniStrana \zadniStranatrue`
+  - používá se k volbě, zda chceme renderovat i zadní stranu
+  - python generátor si toto přepíše, aby zbytečně negeneroval zadní stranu (vždy je stejná)
+  
 ## passports.json
 
 - je to seznam položek ve formátu
