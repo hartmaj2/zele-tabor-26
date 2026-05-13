@@ -149,10 +149,10 @@ def validate_passport(passport: dict, index: int) -> list[str]:
     if "znameni" in passport:
         if not isinstance(passport["znameni"], list):
             errors.append(f"Pas #{index}: pole 'znameni' musí být seznam (list).")
-        elif len(passport["znameni"]) != 3:
+        elif not (1 <= len(passport["znameni"]) <= 3):
             errors.append(
                 f"Pas #{index} ({passport.get('cislo_pasu', '?')}): "
-                f"'znameni' musí mít přesně 3 položky, nalezeno {len(passport['znameni'])}."
+                f"'znameni' musí mít 1 až 3 položky, nalezeno {len(passport['znameni'])}."
             )
 
     return errors

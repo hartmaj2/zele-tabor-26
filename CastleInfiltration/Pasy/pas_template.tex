@@ -103,7 +103,7 @@
 \newcommand{\pasPovolani}{Kovář}
 \newcommand{\pasVlastnostiA}{přerostlé obočí}
 \newcommand{\pasVlastnostiB}{chronický kašel}
-\newcommand{\pasVlastnostiC}{kulhání na pravou nohu}
+\newcommand{\pasVlastnostiC}{škytavka}
 \newcommand{\pasCisloPasu}{CTH-0042}
 
 
@@ -149,6 +149,15 @@
       ($(\delicLinkaDelka,0)+(4mm,0)$) -- ($(\delicLinkaDelka,0)+(4mm+\delicLinkaDelka,0)$);
   \end{tikzpicture}
   \end{center}%
+}
+
+% --- Makro pro podmíněnou položku zvláštního znamení ----------------
+% Vykreslí bullet s textem, jen pokud je text neprázdný.
+\newcommand{\znameniItem}[1]{%
+  \edef\tmp{#1}%
+  \ifx\tmp\empty\else
+    \item[\textcolor{cernarudna}{$\bullet$}] #1%
+  \fi
 }
 
 % --- Makro pro pole ve formátu "popisek nad hodnotou" ----------------
@@ -219,9 +228,9 @@
 \end{center}
 \vspace{-1mm}
 \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\topsep}{0pt}\setlength{\leftmargin}{5mm}
-  \item[\textcolor{cernarudna}{$\bullet$}] \pasVlastnostiA
-  \item[\textcolor{cernarudna}{$\bullet$}] \pasVlastnostiB
-  \item[\textcolor{cernarudna}{$\bullet$}] \pasVlastnostiC
+  \znameniItem{\pasVlastnostiA}
+  \znameniItem{\pasVlastnostiB}
+  \znameniItem{\pasVlastnostiC}
 \end{itemize}
 
 \vfill
