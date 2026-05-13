@@ -59,8 +59,8 @@
   "datum_narozeni_rok_do": 2020,
 
   "expirace": {
-    "aktualni_datum": "13.5.2026",
+    "aktualni_datum": "5.8.2026",
     "max_dni_pred": 10,
-    "max_dni_po": 120
+    "max_dni_po": 20
   }
 }
