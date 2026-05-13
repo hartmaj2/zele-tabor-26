@@ -1,7 +1,7 @@
 .DS_Store
 
 # LaTeX
-*.aux
-*.log
-*.out
-*.synctex.gz
+# *.aux
+# *.log
+# *.out
+# *.synctex.gz
