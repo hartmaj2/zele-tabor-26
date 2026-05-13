@@ -142,7 +142,7 @@ def generate_passport(
         vybrana_surovina – omezení výběru povolání na jednu sekci
     """
     # Pohlaví určuje, ze které skupiny jmen a příjmení se vybírá
-    pohlavi  = random.choice(["M", "F"])
+    pohlavi  = random.choice(["M", "Ž"])
     jmeno    = random.choice(data["jmena"][pohlavi])
     prijmeni = random.choice(data["prijmeni"][pohlavi])
 
@@ -276,7 +276,7 @@ def main():
         passports.append(passport)
 
         expirace_str = passport["expirace"]
-        print(f"  {passport['cislo_pasu']} | {passport['povolani']} | exp: {expirace_str}")
+        print(f"  {passport['cislo_pasu']:^20} | {passport['povolani']:^20} | expirace: {expirace_str:^20}")
 
     # --- Uložení do JSON ------------------------------------------------------
     with open(args.output, "w", encoding="utf-8") as f:
