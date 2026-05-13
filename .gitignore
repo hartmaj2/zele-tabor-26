@@ -6,3 +6,6 @@
 *.out
 *.synctex.gz
 *.synctex(busy)
+
+# Output passports
+CastleInfiltration/Pasy/output/
