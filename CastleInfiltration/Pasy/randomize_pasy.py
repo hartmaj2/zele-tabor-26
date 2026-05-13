@@ -19,6 +19,7 @@ Použití:
   python3 randomize_pasy.py --pocet 25
   python3 randomize_pasy.py --pocet 10 --start 50   # čísla od CTH-0050
   python3 randomize_pasy.py --pocet 10 --znameni 2  # každý pas má 2 znamení
+  python3 randomize_pasy.py --povolani zelezo
 """
 
 import argparse
@@ -57,12 +58,12 @@ def random_expiration(expirace_config: dict, stav: str) -> str:
     Vygeneruje datum expirace relativně k referenčnímu dni z data.json.
 
     `stav`:
-      - "expirovane": 1 až max_dni_pred dní před aktuálním dnem
-      - "validni":    1 až max_dni_po dní po aktuálním dni
+      - "1" nebo "expirovane": 1 až max_dni_pred dní před aktuálním dnem
+      - "0" nebo "validni":    1 až max_dni_po dní po aktuálním dni
     """
     aktualni_datum = datetime.strptime(expirace_config["aktualni_datum"], "%d.%m.%Y")
 
-    if stav == "expirovane":
+    if stav in ["1", "expirovane"]:
         max_posun = expirace_config["max_dni_pred"]
         delta = -random.randint(1, max_posun)
     else:
@@ -103,11 +104,20 @@ def pick_znameni(flat_kategorie: list[list[str]], count: int) -> list[str]:
     return [random.choice(znaky) for znaky in selected]
 
 
-def pick_povolani(povolani_podle_suroviny: dict[str, list[str]]) -> tuple[str, str]:
+def pick_povolani(
+    povolani_podle_suroviny: dict[str, list[str]],
+    vybrana_surovina: str | None = None,
+) -> tuple[str, str]:
     """
     Vybere surovinu a odpovídající povolání ze stejné skupiny.
+
+    Pokud je zadána `vybrana_surovina`, bere jen z této sekce.
     """
-    surovina = random.choice(list(povolani_podle_suroviny.keys()))
+    if vybrana_surovina is None:
+        surovina = random.choice(list(povolani_podle_suroviny.keys()))
+    else:
+        surovina = vybrana_surovina
+
     povolani = random.choice(povolani_podle_suroviny[surovina])
     return povolani, surovina
 
@@ -118,6 +128,7 @@ def generate_passport(
     cislo: int,
     znameni_count: int,
     expirace_stav: str,
+    vybrana_surovina: str | None = None,
 ) -> dict:
     """
     Sestaví jeden náhodný pas.
@@ -128,6 +139,7 @@ def generate_passport(
         cislo          – číslo pasu (použije se pro CTH-XXXX)
         znameni_count  – počet zvláštních znamení (1–3)
         expirace_stav  – "expirovane" nebo "validni"
+        vybrana_surovina – omezení výběru povolání na jednu sekci
     """
     # Pohlaví určuje, ze které skupiny jmen a příjmení se vybírá
     pohlavi  = random.choice(["M", "F"])
@@ -140,7 +152,7 @@ def generate_passport(
     )
 
     expirace = random_expiration(data["expirace"], expirace_stav)
-    povolani, surovina = pick_povolani(data["povolani"])
+    povolani, surovina = pick_povolani(data["povolani"], vybrana_surovina)
     znameni  = pick_znameni(flat_kategorie, znameni_count)
 
     return {
@@ -174,8 +186,12 @@ def main():
         help="Počet zvláštních znamení na pas – 1, 2 nebo 3 (výchozí: 3).",
     )
     parser.add_argument(
-        "--expirace", default="validni", choices=["validni", "expirovane"], metavar="STAV",
-        help="Generovat validní nebo expirované pasy (výchozí: validni).",
+        "--expirace", default="0", choices=["0", "1", "validni", "expirovane"], metavar="STAV",
+        help="0/validni = neexpirované, 1/expirovane = expirované (výchozí: 0).",
+    )
+    parser.add_argument(
+        "--povolani", default=None, metavar="SEKCE",
+        help="Omezí výběr povolání na sekci: drevo, zelezo, latka, jidlo, vedomosti.",
     )
     parser.add_argument(
         "--output", default=OUTPUT_PATH, metavar="SOUBOR",
@@ -225,6 +241,12 @@ def main():
                 f"[CHYBA] data.json -> povolani -> {surovina} musí být neprázdný seznam povolání."
             )
 
+    if args.povolani is not None and args.povolani not in povolani_config:
+        dostupne = ", ".join(povolani_config.keys())
+        sys.exit(
+            f"[CHYBA] Neznámá sekce povolání '{args.povolani}'. Dostupné: {dostupne}."
+        )
+
     # Převede vnořenou strukturu na plochý seznam podkategorií
     flat_kategorie = flatten_kategorie(kategorie)
 
@@ -249,11 +271,12 @@ def main():
             args.start + i,
             args.znameni,
             args.expirace,
+            args.povolani,
         )
         passports.append(passport)
 
         expirace_str = passport["expirace"]
-        print(f"  [{passport['cislo_pasu']}]  {passport['jmeno']:<30}  exp: {expirace_str}")
+        print(f"  {passport['cislo_pasu']} | {passport['povolani']} | exp: {expirace_str}")
 
     # --- Uložení do JSON ------------------------------------------------------
     with open(args.output, "w", encoding="utf-8") as f:

@@ -4,48 +4,52 @@
       "Bartoloměj", "Přemysl", "Radovan", "Ctibor", "Zdeněk",
       "Dalibor", "Jaromír", "Bohumír", "Vladimír", "Václav",
       "Oldřich", "Bořivoj", "Ratibor", "Slavomír", "Čestmír",
-      "Miroslav", "Jaroslav", "Hostivít", "Dobroslav", "Vlastimil"
+      "Miroslav", "Jaroslav", "Hostivít", "Dobroslav", "Vlastimil",
+      "Boleslav", "Ctirad", "Svatopluk", "Dobromír", "Bohuslav",
+      "Lumír", "Mojmír", "Rostislav", "Soběslav", "Miloslav"
     ],
     "F": [
       "Markéta", "Hedvika", "Božena", "Dobromila", "Ludmila",
       "Milada", "Radmila", "Slavěna", "Vlastimila", "Doubravka",
       "Libuše", "Vlasta", "Kateřina", "Dagmar", "Jitka",
-      "Zdena", "Blažena", "Světlana", "Bohdana", "Drahomíra"
+      "Zdena", "Blažena", "Světlana", "Bohdana", "Drahomíra",
+      "Květoslava", "Miloslava", "Bronislava", "Bohumila", "Radoslava",
+      "Mstislava", "Jaroslava", "Dobroslava", "Čestmíra", "Hostislava"
     ]
   },
 
   "prijmeni": {
     "M": [
-      "Křivohlávek", "Veselý",   "Tlustý",    "Vousatý",   "Kulhavý",
-      "Šilhavý",     "Chrochtal", "Huhňal",    "Pisklavý",  "Koktavý",
-      "Drkopal",     "Šilhan",    "Vráskatý",  "Baculatý",  "Škrábaný",
-      "Kašpárek",    "Brkavý",    "Slepatý",   "Hluchán",   "Šmoulík"
+      "Veselý", "Drkopal", "Kašpárek", "Koudelka", "Vejvoda",
+      "Zvoníček", "Cibulka", "Mazanec", "Kolovrátek", "Hrneček",
+      "Cvrček", "Kohoutek", "Hrdlička", "Votruba", "Hromádka",
+      "Kadeřávek", "Bystroň", "Budil", "Jaroš", "Moudrý"
     ],
     "F": [
-      "Křivohlávková", "Veselá",      "Tlustá",      "Vousatá",     "Kulhavá",
-      "Šilhavá",       "Chrochlová",  "Huhňalová",   "Pisklavá",    "Koktavá",
-      "Drkopalová",    "Šilhanová",   "Vráskatá",    "Baculatá",    "Škrábaná",
-      "Kašpárková",    "Brkavá",      "Slepatá",     "Hlucháňová",  "Šmoulíková"
+      "Veselá", "Drkopalová", "Kašpárková", "Koudelková", "Vejvodová",
+      "Zvoníčková", "Cibulková", "Mazancová", "Kolovrátková", "Hrnečková",
+      "Cvrčková", "Kohoutková", "Hrdličková", "Votrubová", "Hromádková",
+      "Kadeřávková", "Bystroňová", "Budilová", "Jarošová", "Moudrá"
     ]
   },
 
   "povolani": {
-    "dřevo": [
+    "drevo": [
       "Truhlář",
       "Dřevorubec"
     ],
-    "železo": [
+    "zelezo": [
       "Kovář"
     ],
-    "látka": [
+    "latka": [
       "Krejčí",
       "Švec"
     ],
-    "jídlo": [
+    "jidlo": [
       "Pekař",
       "Cukrář"
     ],
-    "vědomosti": [
+    "vedomosti": [
       "Účetní",
       "Rádce"
     ]
