@@ -203,11 +203,10 @@ def main():
         sys.exit(f"[CHYBA] JSON soubor nebyl nalezen: {args.json}")
 
     with open(args.json, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        passports = json.load(f)
 
-    passports = data.get("pasy", [])
     if not passports:
-        sys.exit("[CHYBA] V JSON nebyl nalezen žádný pas (očekávaný klíč: 'pasy').")
+        sys.exit("[CHYBA] JSON soubor neobsahuje žádný pas.")
 
     print(f"JSON:    {args.json}")
     print(f"Výstup:  {args.output}")
