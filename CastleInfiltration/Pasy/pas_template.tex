@@ -6,8 +6,7 @@
 \documentclass[10pt]{article}
 
 % --- Balíčky ---------------------------------------------------------
-\usepackage[a6paper,
-            top=7mm, bottom=7mm, left=7mm, right=7mm]{geometry}
+\usepackage[a6paper, top=7mm, bottom=7mm, left=7mm, right=7mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[czech]{babel}
@@ -17,25 +16,87 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{graphicx}
-\usepackage{microtype}
 \usepackage{amssymb}
 \usepackage{eso-pic}
-
 \usetikzlibrary{calc}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
-% --- Barevná paleta (Červená královna / hrací karty) -----------------
-\definecolor{ramecek}{HTML}{A40A1F}    % hluboká karmínová
-\definecolor{akcent}{HTML}{D4AF37}     % zlatá
-\definecolor{cernarudna}{HTML}{2B0A0F}
-\definecolor{popisek}{HTML}{6B4A4A}
-\definecolor{vodoznak}{HTML}{F7DEE2}   % velmi světlý růžový pro watermark
 
-% =====================================================================
-% HARD-KÓDOVANÉ HODNOTY (později nahradit ze .json přes skript)
-% =====================================================================
+% #####################################################################
+% #                                                                   #
+% #   KONFIGURACE  --  zde lze pohodlně ladit vzhled pasu             #
+% #                                                                   #
+% #####################################################################
+
+% --- 1) Barevná paleta -----------------------------------------------
+\definecolor{ramecek}{HTML}{A40A1F}     % hluboká karmínová
+\definecolor{akcent}{HTML}{D4AF37}      % zlatá
+\definecolor{cernarudna}{HTML}{2B0A0F}  % téměř černá s nádechem rudé
+\definecolor{popisek}{HTML}{6B4A4A}     % šedohnědá pro popisky
+\definecolor{vodoznak}{HTML}{F7DEE2}    % světlý růžový (rezerva pro watermark)
+
+% --- 2) Velikosti písma (fontsize{velikost}{řádkování}) --------------
+\newcommand{\fontHlavickaHorni}{\fontsize{14}{9}\selectfont}     % KRÁLOVSTVÍ ČERVENÉ KRÁLOVNY
+\newcommand{\fontHlavickaPas}{\fontsize{16}{18}\selectfont}     % "PAS"
+\newcommand{\fontHlavickaPodnadpis}{\scriptsize}                % "Cestovní průkaz poddaného"
+\newcommand{\fontSekceTitulek}{\small}                          % ZVLÁŠTNÍ ZNAMENÍ, HRANIČNÍ KONTROLA
+\newcommand{\fontBatohTitulek}{\scriptsize}                     % BATOH
+\newcommand{\fontPolePopisek}{\scriptsize}                      % "jméno", "pohlaví", ...
+\newcommand{\fontPoleHodnota}{\small}                           % vlastní hodnota pole
+\newcommand{\fontPoznamka}{\scriptsize}                         % patičkové texty
+
+% --- 3) Rámeček kolem celé stránky -----------------------------------
+\newcommand{\ramVnejsiOdsazeni}{2.5mm}   % vzdálenost vnějšího rámečku od okraje papíru
+\newcommand{\ramStredniOdsazeni}{4mm}    % vzdálenost zlatého rámečku
+\newcommand{\ramVnitrniOdsazeni}{5mm}    % vzdálenost vnitřního rámečku
+\newcommand{\ramVnejsiTloustka}{1.6pt}
+\newcommand{\ramStredniTloustka}{0.6pt}
+\newcommand{\ramVnitrniTloustka}{0.3pt}
+\newcommand{\ramRohOdsazeni}{7.5mm}      % poloha rohových srdíček od rohu papíru
+
+% --- 4) Fotka --------------------------------------------------------
+\newcommand{\fotoSloupecSirka}{33mm}     % šířka levého sloupce (fotka + popisek)
+\newcommand{\fotoSirka}{31mm}            % šířka samotné fotky
+\newcommand{\fotoVyska}{40mm}            % výška samotné fotky
+\newcommand{\fotoRamOdsazeni}{0.6mm}     % šířka zlatého proužku kolem fotky
+
+% --- 5) Datový sloupec (jméno, pohlaví, ...) -------------------------
+\newcommand{\dataSloupecSirka}{55mm}     % šířka pravého sloupce s údaji
+\newcommand{\dataLevySloupec}{25mm}      % šířka levého pole ve dvojici (pohlaví / nar.)
+\newcommand{\dataPravySloupec}{28mm}     % šířka pravého pole (povolání / expirace)
+% Pozn.: \hfill mezi nimi dorovná zbývající mezeru.
+\newcommand{\dataMezeraPoPoli}{1mm}    % svislá mezera za každým polem
+\newcommand{\dataMezeraNadHodnotou}{-0.5mm} % mezera mezi popiskem a hodnotou
+
+% --- 6) Dělící linka --------------------------------------------------
+\newcommand{\delicLinkaDelka}{38mm}      % délka jedné poloviny linky
+\newcommand{\delicLinkaTloustka}{0.4pt}
+
+% --- 7) Razítko (zadní strana) ---------------------------------------
+\newcommand{\razitkoVnejsiR}{16.8mm}     % vnější (zlatý) poloměr
+\newcommand{\razitkoVnitrniR}{16mm}      % vnitřní (přerušovaný karmínový)
+
+% --- 8) Batoh (3 x 2 mřížka) -----------------------------------------
+\newcommand{\batohBunkaSirka}{22mm}      % velikost jedné buňky
+\newcommand{\batohRozestup}{24mm}        % rozteč buněk (sirka + mezera)
+\newcommand{\batohRamOdsazeni}{0.5mm}    % zlatý proužek kolem buňky
+
+% --- 9) Globální svislé mezery ---------------------------------------
+\newcommand{\mezeraPredHlavickou}{1mm}
+\newcommand{\mezeraPoHlavicce}{1mm}
+\newcommand{\mezeraPredZnamenim}{4mm}
+\newcommand{\mezeraPredRazitkem}{1mm}
+\newcommand{\mezeraPredBatohem}{2mm}
+
+
+% #####################################################################
+% #                                                                   #
+% #   ÚDAJE PASU  --  hard-kódované hodnoty                           #
+% #   (později nahradit ze .json přes skript)                         #
+% #                                                                   #
+% #####################################################################
 \newcommand{\pasJmeno}{Bartoloměj Křivohlávek}
 \newcommand{\pasPohlavi}{M}
 \newcommand{\pasDatumNarozeni}{14.\,3.\,1487}
@@ -46,110 +107,124 @@
 \newcommand{\pasVlastnostiC}{kulhání na pravou nohu}
 \newcommand{\pasCisloPasu}{CTH-0042}
 
-% =====================================================================
-% Dekorativní pozadí (rámeček + vodoznak + rohové ornamenty)
-% Kreslí se přes celou FYZICKOU stránku přes eso-pic.
-% =====================================================================
+
+% #####################################################################
+% #                                                                   #
+% #   DEKORACE  --  rámeček stránky, dělící linka, makro pole         #
+% #                                                                   #
+% #####################################################################
+
+% --- Dekorativní pozadí (kreslí se přes celou fyzickou stránku) ------
 \AddToShipoutPictureBG{%
   \begin{tikzpicture}[overlay, remember picture]
-    % Souřadnice (0,0) = levý dolní roh papíru
-    % Posunout vše do levého dolního rohu papíru:
     \begin{scope}[shift={(current page.south west)}]
-      % --- Vnější silný karmínový rámeček -----------------------------
-      \draw[ramecek, line width=1.6pt]
-        (2.5mm, 2.5mm) rectangle
-        ($(\paperwidth, \paperheight)+(-2.5mm,-2.5mm)$);
-      % --- Zlatý prostřední rámeček -----------------------------------
-      \draw[akcent, line width=0.6pt]
-        (4mm, 4mm) rectangle
-        ($(\paperwidth, \paperheight)+(-4mm,-4mm)$);
-      % --- Vnitřní tenký karmínový rámeček ----------------------------
-      \draw[ramecek, line width=0.3pt]
-        (5mm, 5mm) rectangle
-        ($(\paperwidth, \paperheight)+(-5mm,-5mm)$);
-      % --- Rohové ornamenty: srdíčka ----------------------------------
-      \node[color=ramecek] at (7.5mm, \paperheight-7.5mm) {$\heartsuit$};
-      \node[color=ramecek] at (\paperwidth-7.5mm, \paperheight-7.5mm) {$\heartsuit$};
-      \node[color=ramecek] at (7.5mm, 7.5mm) {$\heartsuit$};
-      \node[color=ramecek] at (\paperwidth-7.5mm, 7.5mm) {$\heartsuit$};
+      % vnější silný karmínový rámeček
+      \draw[ramecek, line width=\ramVnejsiTloustka]
+        (\ramVnejsiOdsazeni, \ramVnejsiOdsazeni) rectangle
+        ($(\paperwidth, \paperheight)+(-\ramVnejsiOdsazeni,-\ramVnejsiOdsazeni)$);
+      % prostřední zlatý
+      \draw[akcent, line width=\ramStredniTloustka]
+        (\ramStredniOdsazeni, \ramStredniOdsazeni) rectangle
+        ($(\paperwidth, \paperheight)+(-\ramStredniOdsazeni,-\ramStredniOdsazeni)$);
+      % vnitřní tenký karmínový
+      \draw[ramecek, line width=\ramVnitrniTloustka]
+        (\ramVnitrniOdsazeni, \ramVnitrniOdsazeni) rectangle
+        ($(\paperwidth, \paperheight)+(-\ramVnitrniOdsazeni,-\ramVnitrniOdsazeni)$);
+      % rohová srdíčka
+      \node[color=ramecek] at (\ramRohOdsazeni, \paperheight-\ramRohOdsazeni) {$\heartsuit$};
+      \node[color=ramecek] at (\paperwidth-\ramRohOdsazeni, \paperheight-\ramRohOdsazeni) {$\heartsuit$};
+      \node[color=ramecek] at (\ramRohOdsazeni, \ramRohOdsazeni) {$\heartsuit$};
+      \node[color=ramecek] at (\paperwidth-\ramRohOdsazeni, \ramRohOdsazeni) {$\heartsuit$};
     \end{scope}
   \end{tikzpicture}%
 }
 
-% --- Dělící linka s ornamentem ---------------------------------------
+% --- Dělící linka se srdíčkem uprostřed ------------------------------
 \newcommand{\pasDelic}{%
-\begin{center}
-\begin{tikzpicture}
-  \draw[ramecek, line width=0.4pt] (0,0) -- (38mm,0);
-  \node[color=ramecek, fill=white, inner sep=1pt] at (40mm,0) {\small$\heartsuit$};
-  \draw[ramecek, line width=0.4pt] (42mm,0) -- (80mm,0);
-\end{tikzpicture}
-\end{center}%
+  \begin{center}
+  \begin{tikzpicture}
+    \draw[ramecek, line width=\delicLinkaTloustka] (0,0) -- (\delicLinkaDelka,0);
+    \node[color=ramecek, fill=white, inner sep=1pt]
+      at ($(\delicLinkaDelka,0)+(2mm,0)$) {\small$\heartsuit$};
+    \draw[ramecek, line width=\delicLinkaTloustka]
+      ($(\delicLinkaDelka,0)+(4mm,0)$) -- ($(\delicLinkaDelka,0)+(4mm+\delicLinkaDelka,0)$);
+  \end{tikzpicture}
+  \end{center}%
 }
 
-% =====================================================================
+% --- Makro pro pole ve formátu "popisek nad hodnotou" ----------------
+\newcommand{\polePas}[2]{%
+  {\fontPolePopisek\color{popisek}\textsc{#1}}\par
+  \vspace{\dataMezeraNadHodnotou}%
+  {\fontPoleHodnota\bfseries\color{cernarudna} #2}\par
+  \vspace{\dataMezeraPoPoli}%
+}
+
+
+% #####################################################################
+% #                                                                   #
+% #   OBSAH DOKUMENTU                                                 #
+% #                                                                   #
+% #####################################################################
 \begin{document}
 
 % =====================================================================
 % PŘEDNÍ STRANA
 % =====================================================================
-\vspace*{1mm}
+\vspace*{\mezeraPredHlavickou}
 
-% --- Hlavička ------------------------------------------------------
+% --- Hlavička --------------------------------------------------------
 \begin{center}
-  {\fontsize{8}{9}\selectfont\bfseries\color{ramecek} KRÁLOVSTVÍ ČERVENÉ KRÁLOVNY}\\[0.2mm]
-  {\fontsize{16}{18}\selectfont\bfseries\color{cernarudna} P\,A\,S}\\[-0.5mm]
-  {\scriptsize\itshape\color{popisek} Cestovní průkaz poddaného}
+  {\fontHlavickaHorni\bfseries\color{ramecek} KRÁLOVSTVÍ ČERVENÉ KRÁLOVNY}\\[0.2mm]
+  \vspace{1mm}
+  {\fontHlavickaPas\bfseries\color{cernarudna} P\,A\,S}\\[-0.5mm]
+  {\fontHlavickaPodnadpis\itshape\color{popisek} Cestovní průkaz poddaného}
 \end{center}
 
-\vspace{-1mm}
+\vspace{-\mezeraPoHlavicce}
 \pasDelic
-\vspace{1mm}
+\vspace{\mezeraPoHlavicce}
 
 % --- Fotka + údaje ---------------------------------------------------
 \noindent
-\begin{minipage}[t]{33mm}
+\begin{minipage}[t]{\fotoSloupecSirka}
   \vspace{0pt}
   \begin{tikzpicture}
-    % Zlatý rámeček - symetricky 0.6 mm okolo přerušované linky
-    \draw[akcent, line width=1pt] (-0.6mm,-0.6mm) rectangle (32.6mm, 40.6mm);
-    \draw[ramecek, dashed, line width=0.5pt] (0,0) rectangle (32mm, 40mm);
+    % zlatý rámeček symetricky kolem fotky
+    \draw[akcent, line width=1pt]
+      (-\fotoRamOdsazeni,-\fotoRamOdsazeni) rectangle
+      ($(\fotoSirka,\fotoVyska)+(\fotoRamOdsazeni,\fotoRamOdsazeni)$);
+    % přerušovaný karmínový vnitřek
+    \draw[ramecek, dashed, line width=0.5pt] (0,0) rectangle (\fotoSirka,\fotoVyska);
     \node[align=center, color=popisek, font=\scriptsize\itshape]
-      at (16mm, 20mm) {fotografie\\(dokresli)};
+      at ($(0,0)!0.5!(\fotoSirka,\fotoVyska)$) {fotografie\\(dokresli)};
   \end{tikzpicture}\\[2mm]
-  {\centering\scriptsize\color{popisek}č.~pasu: \textbf{\pasCisloPasu}\par}
+  {\centering\fontPoznamka\color{popisek}č.~pasu: \textbf{\pasCisloPasu}\par}
 \end{minipage}\hfill
-\begin{minipage}[t]{55mm}
+\begin{minipage}[t]{\dataSloupecSirka}
   \vspace{-1mm}
-  % Pomocné makro: titulek (capitálky) nad hodnotou
-  \newcommand{\polePas}[2]{%
-    {\scriptsize\color{popisek}\textsc{#1}}\par
-    \vspace{-0.5mm}%
-    {\small\bfseries\color{cernarudna} #2}\par
-    \vspace{0.8mm}%
-  }
   \polePas{jméno}{\pasJmeno}
-  \begin{minipage}[t]{25mm}
+  \begin{minipage}[t]{\dataLevySloupec}
     \polePas{pohlaví}{\pasPohlavi}
   \end{minipage}\hfill
-  \begin{minipage}[t]{28mm}
+  \begin{minipage}[t]{\dataPravySloupec}
     \polePas{povolání}{\textcolor{ramecek}{\pasPovolani}}
   \end{minipage}\par
-  \begin{minipage}[t]{25mm}
+  \begin{minipage}[t]{\dataLevySloupec}
     \polePas{nar.}{\pasDatumNarozeni}
   \end{minipage}\hfill
-  \begin{minipage}[t]{28mm}
+  \begin{minipage}[t]{\dataPravySloupec}
     \polePas{expirace}{\pasExpirace}
   \end{minipage}
 \end{minipage}
 
-\vspace{4mm}
+\vspace{\mezeraPredZnamenim}
 \pasDelic
 
 % --- Zvláštní znamení (nedokonalosti) --------------------------------
 \vspace{1mm}
 \begin{center}
-  {\small\bfseries\color{ramecek} ZVLÁŠTNÍ ZNAMENÍ}
+  {\fontSekceTitulek\bfseries\color{ramecek} ZVLÁŠTNÍ ZNAMENÍ}
 \end{center}
 \vspace{-1mm}
 \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\topsep}{0pt}\setlength{\leftmargin}{5mm}
@@ -159,9 +234,10 @@
 \end{itemize}
 
 \vfill
-\begin{center}\scriptsize\itshape\color{popisek}
+\begin{center}\fontPoznamka\itshape\color{popisek}
   Platné pouze s razítkem hraniční kontroly.
 \end{center}
+
 
 % =====================================================================
 % ZADNÍ STRANA
@@ -169,27 +245,28 @@
 \newpage
 \vspace*{2mm}
 \begin{center}
-  {\scriptsize\bfseries\color{ramecek} HRANIČNÍ KONTROLA}
+  {\fontSekceTitulek\bfseries\color{ramecek} HRANIČNÍ KONTROLA}
 \end{center}
 
-\vspace{1mm}
+\vspace{\mezeraPredRazitkem}
 % --- Razítko ---------------------------------------------------------
 \begin{center}
   \begin{tikzpicture}
-    \draw[akcent, line width=0.8pt] (0,0) circle (16.8mm);
-    \draw[ramecek, dashed, line width=0.6pt] (0,0) circle (16mm);
-    \node[align=center, color=popisek, font=\scriptsize\itshape] at (0,0) {místo\\na razítko};
+    \draw[akcent, line width=0.8pt] (0,0) circle (\razitkoVnejsiR);
+    \draw[ramecek, dashed, line width=0.6pt] (0,0) circle (\razitkoVnitrniR);
+    \node[align=center, color=popisek, font=\scriptsize\itshape]
+      at (0,0) {místo\\na razítko};
   \end{tikzpicture}
 \end{center}
 
-\vspace{2mm}
+\vspace{\mezeraPredBatohem}
 \pasDelic
 
 % --- Batoh -----------------------------------------------------------
 \vspace{1mm}
 \begin{center}
-  {\scriptsize\bfseries\color{ramecek} BATOH}\,
-  {\scriptsize\itshape\color{popisek}(nalep suroviny)}
+  {\fontBatohTitulek\bfseries\color{ramecek} BATOH}\,
+  {\fontBatohTitulek\itshape\color{popisek}(nalep suroviny)}
 \end{center}
 
 \vspace{1mm}
@@ -197,19 +274,24 @@
   \begin{tikzpicture}
     \foreach \r in {0,1} {
       \foreach \c in {0,1,2} {
+        % zlatý vnější obrys
         \draw[akcent, line width=0.6pt]
-          ({\c*24mm - 0.5mm}, {-\r*24mm + 0.5mm}) rectangle
-          ({\c*24mm + 22.5mm}, {-\r*24mm - 22.5mm});
+          ({\c*\batohRozestup - \batohRamOdsazeni},
+           {-\r*\batohRozestup + \batohRamOdsazeni}) rectangle
+          ({\c*\batohRozestup + \batohBunkaSirka + \batohRamOdsazeni},
+           {-\r*\batohRozestup - \batohBunkaSirka - \batohRamOdsazeni});
+        % karmínový vnitřní obrys
         \draw[ramecek, line width=0.5pt]
-          ({\c*24mm}, {-\r*24mm}) rectangle
-          ({\c*24mm + 22mm}, {-\r*24mm - 22mm});
+          ({\c*\batohRozestup}, {-\r*\batohRozestup}) rectangle
+          ({\c*\batohRozestup + \batohBunkaSirka},
+           {-\r*\batohRozestup - \batohBunkaSirka});
       }
     }
   \end{tikzpicture}
 \end{center}
 
 \vfill
-\begin{center}\scriptsize\itshape\color{popisek}
+\begin{center}\fontPoznamka\itshape\color{popisek}
   Suroviny mimo batoh budou na hranici zabaveny.
 \end{center}
 
