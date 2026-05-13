@@ -1,0 +1,57 @@
+{
+  "jmena": {
+    "M": [
+      "Bartoloměj", "Přemysl", "Radovan", "Ctibor", "Zdeněk",
+      "Dalibor", "Jaromír", "Bohumír", "Vladimír", "Václav",
+      "Oldřich", "Bořivoj", "Ratibor", "Slavomír", "Čestmír",
+      "Miroslav", "Jaroslav", "Hostivít", "Dobroslav", "Vlastimil"
+    ],
+    "F": [
+      "Markéta", "Hedvika", "Božena", "Dobromila", "Ludmila",
+      "Milada", "Radmila", "Slavěna", "Vlastimila", "Doubravka",
+      "Libuše", "Vlasta", "Kateřina", "Dagmar", "Jitka",
+      "Zdena", "Blažena", "Světlana", "Bohdana", "Drahomíra"
+    ]
+  },
+
+  "prijmeni": {
+    "M": [
+      "Křivohlávek", "Veselý",   "Tlustý",    "Vousatý",   "Kulhavý",
+      "Šilhavý",     "Chrochtal", "Huhňal",    "Pisklavý",  "Koktavý",
+      "Drkopal",     "Šilhan",    "Vráskatý",  "Baculatý",  "Škrábaný",
+      "Kašpárek",    "Brkavý",    "Slepatý",   "Hluchán",   "Šmoulík"
+    ],
+    "F": [
+      "Křivohlávková", "Veselá",      "Tlustá",      "Vousatá",     "Kulhavá",
+      "Šilhavá",       "Chrochlová",  "Huhňalová",   "Pisklavá",    "Koktavá",
+      "Drkopalová",    "Šilhanová",   "Vráskatá",    "Baculatá",    "Škrábaná",
+      "Kašpárková",    "Brkavá",      "Slepatá",     "Hlucháňová",  "Šmoulíková"
+    ]
+  },
+
+  "povolani": [
+    "Kovář",    "Truhlář",   "Kuchař",    "Pradlena",  "Zahradník",
+    "Malíř",    "Strážce",   "Obchodník", "Šašek",     "Krejčí",
+    "Mlynář",   "Rybář",     "Zlatník",   "Zedník",    "Tesař",
+    "Kolář",    "Bednář",    "Řezník",    "Pekař",     "Švec",
+    "Sklenář",  "Mydlář",    "Hrnčíř",   "Lazebník",  "Posel"
+  ],
+
+  "datum_narozeni_rok_od": 2010,
+  "datum_narozeni_rok_do": 2020,
+
+  "data_expirace": [
+    "28.2.2026",
+    "31.3.2026",
+    "30.4.2026",
+    "30.6.2026",
+    "31.7.2026",
+    "31.7.2026",
+    "31.8.2026",
+    "31.8.2026",
+    "31.10.2026",
+    "31.12.2026",
+    "31.12.2027",
+    "31.12.2028"
+  ]
+}

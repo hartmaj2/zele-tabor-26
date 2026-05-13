@@ -1,0 +1,134 @@
+{
+  "vzhled": {
+    "velikost_obliceje": [
+      "obrovský nos",
+      "obrovské uši",
+      "obrovské rty",
+      "obrovské tváře",
+      "obrovská brada",
+      "obrovské čelo",
+      "obrovské obočí",
+      "obrovské zuby",
+      "široká pusa",
+      "nafouklá tvář"
+    ],
+    "tvar_obliceje": [
+      "zahnutý nos",
+      "bambulovitý nos",
+      "špičatý nos",
+      "placatý nos",
+      "křivá pusa",
+      "věčně zamračený výraz",
+      "věčně překvapený výraz",
+      "přimhouřené oči",
+      "jedno obočí výš než druhé"
+    ],
+    "vlasy_a_vousy": [
+      "přerostlé vlasy",
+      "rozcuchané vlasy",
+      "nalepená ofina",
+      "pleš s jedním pramenem",
+      "obří knír",
+      "zatočený knír",
+      "dlouhé vousy",
+      "bradka",
+      "spojené obočí",
+      "přerostlé řasy",
+      "chlupaté uši",
+      "vlasy trčící do všech stran"
+    ],
+    "znacky_na_obliceji": [
+      "jizva na tváři",
+      "škrábanec přes nos",
+      "pihy",
+      "obří piha",
+      "modřina pod okem",
+      "černý puntík na nose",
+      "červené tváře",
+      "bílý pudr na obličeji",
+      "šmouha od sazí",
+      "flek od inkoustu",
+      "monokl",
+      "pirátská páska přes oko"
+    ],
+    "telo": [
+      "obří břicho",
+      "obří hrb",
+      "široká ramena",
+      "obří boty",
+      "kulatá postava"
+    ]
+  },
+  "projev": {
+    "hlas": [
+      "mluví velmi hlubokým hlasem",
+      "mluví velmi vysokým hlasem",
+      "mluví šeptem",
+      "mluví příliš nahlas",
+      "mluví zpěvavě",
+      "mluví extrémně pomalu",
+      "mluví extrémně rychle",
+      "protahuje samohlásky",
+      "přehnaně huhňá"
+    ],
+    "rec": [
+      "každou větu končí otázkou",
+      "za každou větou říká \u201eprosím pěkně\u201c",
+      "za každou větou říká \u201eu všech klobouků\u201c",
+      "často říká \u201eto je tajné\u201c",
+      "často říká \u201ejá nic, já poddaný\u201c",
+      "každého oslovuje \u201eVaše Veličenstvo\u201c",
+      "všechno přehnaně potvrzuje",
+      "všechno přehnaně popírá",
+      "odpovídá jen v rýmech",
+      "odpovídá jednoslovně",
+      "počítá nahlas každou věc",
+      "pořád opakuje poslední slovo věty"
+    ],
+    "gesto": [
+      "často mrká",
+      "hladí si knír",
+      "upravuje si obočí",
+      "drží se za bradu",
+      "pořád si rovná límec",
+      "salutuje",
+      "přehnaně se klaní",
+      "počítá na prstech",
+      "dělá dramatické pauzy"
+    ],
+    "pohyb": [
+      "chodí po špičkách",
+      "chodí velmi pomalu",
+      "chodí velmi vzpřímeně",
+      "cupitá",
+      "po každých třech krocích se ukloní",
+      "při chůzi mává rukama",
+      "chodí jako robot",
+      "chodí jako tučňák",
+      "dělá malé krůčky",
+      "pořád se otáčí přes rameno",
+      "při zastavení salutuje",
+      "musí stát v pozoru"
+    ]
+  },
+  "chovani": {
+    "povaha": [
+      "přehnaně podezřívavý",
+      "přehnaně uctivý",
+      "přehnaně namyšlený",
+      "přehnaně bojácný",
+      "přehnaně veselý",
+      "přehnaně smutný",
+      "přehnaně úřednický",
+      "přehnaně tajemný",
+      "přehnaně zapomnětlivý",
+      "přehnaně puntičkářský",
+      "přehnaně poslušný",
+      "přehnaně rozkazovačný",
+      "všechno bere doslova",
+      "myslí si, že je velmi důležitý",
+      "bojí se, že zmešká čaj",
+      "neustále kontroluje pas"
+    ]
+  }
+}
