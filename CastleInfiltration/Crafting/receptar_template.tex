@@ -1,0 +1,54 @@
+% =====================================================================
+% Sablona receptare pro CTH - Infiltrace hradu
+% Generuje se skriptem generate_receptar.py z recepty.json
+% =====================================================================
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, top=13mm, bottom=14mm, left=12mm, right=12mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{3mm}
+\setlength{\fboxrule}{0.45pt}
+
+\definecolor{ink}{HTML}{27343B}
+\definecolor{muted}{HTML}{6C6256}
+\definecolor{paper}{HTML}{FFFDF8}
+\definecolor{panel}{HTML}{F7F2E8}
+\definecolor{gridline}{HTML}{BAAD95}
+\definecolor{accent}{HTML}{7B4D22}
+
+\newcommand{\RecipeBookTitle}{\detokenize{__BOOK_TITLE__}}
+
+\newcommand{\recipeCard}[3]{%
+  \begingroup
+  \fcolorbox{gridline}{paper}{%
+    \begin{minipage}[t]{0.41\textwidth}
+      {\large\bfseries\color{ink} #1}\par
+      \vspace{1.5mm}
+      \begin{center}
+        #3
+      \end{center}
+      \vspace{1mm}
+      {\footnotesize\color{muted} #2\par}
+    \end{minipage}%
+  }%
+  \endgroup
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries\color{accent} \RecipeBookTitle}
+\end{center}
+
+\vspace{2mm}
+
+\end{document}

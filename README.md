@@ -69,3 +69,57 @@ Zde je důležité nastavit aktuální datum na datum, kdy má hra proběhnout.
     "max_dni_po": 10
   }
 ```
+
+# Crafting předmětů
+
+Recepty používají LaTeXovou šablonu `receptar_template.tex` do které skript `generate_receptar.py` vloží karty receptů z `recepty.json`.
+
+## receptar_template.tex
+
+- samostatně kompilovatelná šablona (zobrazí prázdný receptář bez karet)
+- název receptáře je nastaven přímo v `generate_receptar.py` (`"Receptář předmětů"`)
+
+## recepty.json
+
+Seznam receptů ve formátu:
+
+```json
+{
+  "name": "Batoh",
+  "effect": "Popis efektu předmětu.",
+  "points": 0,
+  "grid": [
+    ["L", " ", "L"],
+    ["L", "D", "L"],
+    ["L", "L", "L"]
+  ]
+}
+```
+
+Povolené suroviny v gridu: `D` (dřevo), `Z` (železo), `L` (látka), `J` (jídlo), `V` (vědomosti), mezera = prázdné pole.
+
+## Ikonky
+
+Obrázky surovin leží ve složce `CastleInfiltration/Crafting/ikonky/` a musí se jmenovat přesně takto:
+
+| Soubor | Surovina |
+|---|---|
+| `drevo.png` | D |
+| `zelezo.png` | Z |
+| `latka.png` | L |
+| `jidlo.png` | J |
+| `vedomosti.png` | V |
+
+Skript při spuštění zkontroluje, zda všechny soubory existují, a pokud ne, skončí s chybou.
+
+## generate_receptar.py
+
+Načte šablonu, vloží karty receptů a zkompiluje PDF do složky `output/`.
+
+Použití:
+
+```
+python3 CastleInfiltration/Crafting/generate_receptar.py
+```
+
+Výstup: `output/receptar.pdf` a `output/receptar.tex`

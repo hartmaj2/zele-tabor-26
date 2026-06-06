@@ -1,0 +1,202 @@
+[
+    {
+      "name": "Batoh",
+      "effect": "Po dobu 10 minut může tým vyslat jednu dvojici, která smí v jednom běhu nést 2 papírky místo 1. Pokud ji chytí červená karta, odevzdá oba papírky.",
+      "points": 0,
+      "grid": [
+        ["L", " ", "L"],
+        ["L", "D", "L"],
+        ["L", "L", "L"]
+      ]
+    },
+    {
+      "name": "Lektvar síly",
+      "effect": "Jedna dvojice může při jednom běhu nést 2 papírky. Pokud ji chytí červená karta, odevzdá pouze jeden z nich.",
+      "points": 0,
+      "grid": [
+        [" ", "J", " "],
+        ["J", "Z", "J"],
+        [" ", "V", " "]
+      ]
+    },
+    {
+      "name": "Štít",
+      "effect": "Při jednom zásahu červenou kartou se zásah neřeší. Dvojice pokračuje dál a papírek jí zůstává.",
+      "points": 0,
+      "grid": [
+        [" ", "Z", " "],
+        ["Z", "Z", "Z"],
+        [" ", "L", " "]
+      ]
+    },
+    {
+      "name": "Obvazy",
+      "effect": "Zruší jeden právě aktivní negativní efekt na vlastní tým.",
+      "points": 0,
+      "grid": [
+        ["L", " ", "L"],
+        [" ", "J", " "],
+        ["L", " ", "L"]
+      ]
+    },
+    {
+      "name": "Svitek transformace",
+      "effect": "Jeden přinesený papírek se při odevzdání game masterovi počítá jako papírek o jednu úroveň vyšší.",
+      "points": 0,
+      "grid": [
+        [" ", "V", " "],
+        ["V", "J", "V"],
+        [" ", "L", " "]
+      ]
+    },
+    {
+      "name": "Kompas rádce",
+      "effect": "Chess-master dá týmu jednu nápovědu k aktuální matici bez nutnosti řešit osmisměrku, sudoku nebo křížovku.",
+      "points": 0,
+      "grid": [
+        [" ", "V", " "],
+        ["D", "Z", "D"],
+        [" ", " ", " "]
+      ]
+    },
+    {
+      "name": "Brýle pravdy",
+      "effect": "Při jednom špatném pokusu o vyřešení matice tým nedostane minus body.",
+      "points": 0,
+      "grid": [
+        ["Z", " ", "Z"],
+        [" ", "V", " "],
+        ["L", " ", "L"]
+      ]
+    },
+    {
+      "name": "Šachová kronika",
+      "effect": "Při upgradu figurky se týmu neztratí rozpracovaná osmisměrka, sudoku nebo křížovka.",
+      "points": 0,
+      "grid": [
+        ["V", "V", "V"],
+        ["L", " ", "L"],
+        ["D", " ", "D"]
+      ]
+    },
+    {
+      "name": "Hodiny Kloboučníka",
+      "effect": "Po signálu Změna strategie má tým 90 sekund ochranného času bez minus bodu za krátké opuštění koberce při vyměně.",
+      "points": 0,
+      "grid": [
+        [" ", "Z", " "],
+        ["Z", "V", "Z"],
+        [" ", "J", " "]
+      ]
+    },
+    {
+      "name": "Věžový most",
+      "effect": "Při jednom přesunu na centrální šachovnici smí tým přesunout obě děti najednou, pokud to předem nahlásí Červené královně.",
+      "points": 0,
+      "grid": [
+        ["D", "Z", "D"],
+        ["D", "L", "D"],
+        ["D", "Z", "D"]
+      ]
+    },
+    {
+      "name": "Laso",
+      "effect": "Vybraný cizí tým posune svou aktuální postupovou figurku u game mastera o 2 pole zpátky.",
+      "points": 0,
+      "grid": [
+        ["L", "L", " "],
+        ["L", " ", "D"],
+        [" ", " ", "Z"]
+      ]
+    },
+    {
+      "name": "Pouta",
+      "effect": "Vybraný cizí tým musí po dobu 5 minut běhat v lese tak, že se dvojice drží za ruce.",
+      "points": 0,
+      "grid": [
+        ["Z", " ", "Z"],
+        [" ", "L", " "],
+        ["Z", " ", "Z"]
+      ]
+    },
+    {
+      "name": "Dortík",
+      "effect": "Tým může požádat jednu červenou kartu, aby po dobu 3 minut aktivně hlídala vybraný cizí tým.",
+      "points": 0,
+      "grid": [
+        [" ", "J", " "],
+        ["J", "V", "J"],
+        [" ", "D", " "]
+      ]
+    },
+    {
+      "name": "Kouřová clona",
+      "effect": "Vybraný cizí tým musí před získáním další nápovědy od chess-mastera splnit jednu krátkou lušťovku navíc.",
+      "points": 0,
+      "grid": [
+        ["L", "J", "L"],
+        [" ", "V", " "],
+        ["L", "J", "L"]
+      ]
+    },
+    {
+      "name": "Zrcadlový štít",
+      "effect": "Pokud někdo zahraje negativní předmět na tento tým, tým může efekt odrazit zpět na sesilatele.",
+      "points": 0,
+      "grid": [
+        ["V", "Z", "V"],
+        ["Z", "Z", "Z"],
+        [" ", "L", " "]
+      ]
+    },
+    {
+      "name": "Opevněná věž",
+      "effect": "Tým je 10 minut chráněný před negativními předměty od ostatních týmů.",
+      "points": 0,
+      "grid": [
+        ["Z", " ", "Z"],
+        ["Z", "D", "Z"],
+        ["D", "D", "D"]
+      ]
+    },
+    {
+      "name": "Mapa tajných cest",
+      "effect": "Tým před během nahlásí game masterovi cílový typ papírku. Pokud ho dvojice přinese, game master k jeho hodnotě přidá +3 body.",
+      "points": 0,
+      "grid": [
+        ["D", "L", "D"],
+        [" ", "V", " "],
+        ["D", "L", "D"]
+      ]
+    },
+    {
+      "name": "Válečný buben",
+      "effect": "Game master okamžitě přidá +4 body k aktuální postupové figurce týmu.",
+      "points": 0,
+      "grid": [
+        ["D", "L", "D"],
+        ["D", "Z", "D"],
+        [" ", "J", " "]
+      ]
+    },
+    {
+      "name": "Sedmimílové boty",
+      "effect": "Jedna dvojice může při jednom běhu po úspěšném návratu odevzdat papírek za dvojnásobnou bodovou hodnotu, maximálně však +4 body navíc.",
+      "points": 0,
+      "grid": [
+        ["L", " ", "L"],
+        ["D", " ", "D"],
+        ["J", " ", "J"]
+      ]
+    },
+    {
+      "name": "Královský rozkaz",
+      "effect": "Tým může požádat chess-mastera, aby do 2 minut vyhlásil signál Změna strategie.",
+      "points": 0,
+      "grid": [
+        ["V", "Z", "V"],
+        ["Z", "J", "Z"],
+        ["V", "Z", "V"]
+      ]
+    }
+]

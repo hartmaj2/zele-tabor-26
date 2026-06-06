@@ -1,0 +1,397 @@
+% =====================================================================
+% Sablona receptare pro CTH - Infiltrace hradu
+% Generuje se skriptem generate_receptar.py z recepty.json
+% =====================================================================
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, top=13mm, bottom=14mm, left=12mm, right=12mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{3mm}
+\setlength{\fboxrule}{0.45pt}
+
+\definecolor{ink}{HTML}{27343B}
+\definecolor{muted}{HTML}{6C6256}
+\definecolor{paper}{HTML}{FFFDF8}
+\definecolor{panel}{HTML}{F7F2E8}
+\definecolor{gridline}{HTML}{BAAD95}
+\definecolor{accent}{HTML}{7B4D22}
+
+\newcommand{\RecipeBookTitle}{Receptář předmětů}
+
+\newcommand{\recipeCard}[3]{%
+  \begingroup
+  \fcolorbox{gridline}{paper}{%
+    \begin{minipage}[t]{0.41\textwidth}
+      {\large\bfseries\color{ink} #1}\par
+      \vspace{1.5mm}
+      \begin{center}
+        #3
+      \end{center}
+      \vspace{1mm}
+      {\footnotesize\color{muted} #2\par}
+    \end{minipage}%
+  }%
+  \endgroup
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries\color{accent} \RecipeBookTitle}
+\end{center}
+
+\vspace{2mm}
+
+\noindent
+\recipeCard{Batoh}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Lektvar síly}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Štít}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Obvazy}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Svitek transformace}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Kompas rádce}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Brýle pravdy}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Šachová kronika}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Hodiny Kloboučníka}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Věžový most}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Laso}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Pouta}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Dortík}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Kouřová clona}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Zrcadlový štít}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Opevněná věž}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Mapa tajných cest}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Válečný buben}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+
+\noindent
+\recipeCard{Sedmimílové boty}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/latka.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/drevo.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+\end{tikzpicture}
+}
+\hfill
+\recipeCard{Královský rozkaz}{Body: 0}{%
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \foreach \r in {0,1,2} {
+    \foreach \c in {0,1,2} {
+      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*17,-\r*17) rectangle ++(17,-17);
+    }
+  }
+  \node at (8.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-8.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (8.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (25.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/jidlo.png}}};
+  \node at (42.5,-25.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (8.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+  \node at (25.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/zelezo.png}}};
+  \node at (42.5,-42.5) {\includegraphics[width=13.5mm,height=13.5mm,keepaspectratio]{\detokenize{/Users/janhartman/Desktop/zele-tabor-26/CastleInfiltration/Crafting/ikonky/vedomosti.png}}};
+\end{tikzpicture}
+}
+\par\vspace{5mm}
+\end{document}
