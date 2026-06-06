@@ -4,6 +4,7 @@
 from itertools import zip_longest
 from pathlib import Path
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -49,6 +50,35 @@ def latex_path(path):
     return r"\detokenize{" + path.resolve().as_posix() + "}"
 
 
+def parse_param(template, name):
+    r"""Precte hodnotu \newcommand{\Name}{value} ze sablony."""
+    pattern = r"\\newcommand\{\\" + re.escape(name) + r"\}\{([^}]*)\}"
+    m = re.search(pattern, template)
+    if not m:
+        sys.exit(f"[CHYBA] Parametr \\{name} nebyl nalezen v sablone.")
+    return m.group(1)
+
+
+def parse_grid_params(template):
+    """Nacte vizualni parametry mrizky ze sablony."""
+    return {
+        "cell_size": float(parse_param(template, "ParamGridCellMM")),
+        "icon_size_mm": float(parse_param(template, "ParamGridIconMM")),
+        "corner": parse_param(template, "ParamGridCorner"),
+        "line_width_pt": float(parse_param(template, "ParamGridLinePt")),
+    }
+
+
+def strip_dummy(template):
+    """Odstrani sekci dummy nahledu mezi %DUMMY_BEGIN a %DUMMY_END."""
+    return re.sub(
+        r"^%DUMMY_BEGIN$.*?^%DUMMY_END$\n?",
+        "",
+        template,
+        flags=re.MULTILINE | re.DOTALL,
+    )
+
+
 def load_recipes():
     with RECIPES_JSON.open("r", encoding="utf-8") as file:
         recipes = json.load(file)
@@ -83,14 +113,17 @@ def validate_recipes(recipes):
             sys.exit(f"[CHYBA] Chybi ikonka: {path}")
 
 
-def grid_to_latex(grid):
-    cell_size = 17
-    icon_size = "13.5mm"
+def grid_to_latex(grid, params):
+    cell_size = params["cell_size"]
+    icon_size = f"{params['icon_size_mm']}mm"
+    corner = params["corner"]
+    line_width = f"{params['line_width_pt']}pt"
+
     lines = [
         r"\begin{tikzpicture}[x=1mm,y=1mm]",
         r"  \foreach \r in {0,1,2} {",
         r"    \foreach \c in {0,1,2} {",
-        rf"      \draw[draw=gridline, fill=panel, line width=0.45pt, rounded corners=1.2mm] (\c*{cell_size},-\r*{cell_size}) rectangle ++({cell_size},-{cell_size});",
+        rf"      \draw[draw=gridline, fill=panel, line width={line_width}, rounded corners={corner}] (\c*{cell_size},-\r*{cell_size}) rectangle ++({cell_size},-{cell_size});",
         r"    }",
         r"  }",
     ]
@@ -112,15 +145,15 @@ def grid_to_latex(grid):
     return "\n".join(lines)
 
 
-def recipe_to_latex(recipe):
+def recipe_to_latex(recipe, params):
     name = latex_escape(recipe["name"])
     points = latex_escape(recipe["points"])
-    grid = grid_to_latex(recipe["grid"])
+    grid = grid_to_latex(recipe["grid"], params)
     return f"\\recipeCard{{{name}}}{{Body: {points}}}{{%\n{grid}\n}}\n"
 
 
-def recipes_to_latex(recipes):
-    cards = [recipe_to_latex(recipe) for recipe in recipes]
+def recipes_to_latex(recipes, params):
+    cards = [recipe_to_latex(recipe, params) for recipe in recipes]
     rows = []
 
     for left, right in zip_longest(cards[::2], cards[1::2], fillvalue=""):
@@ -171,16 +204,19 @@ def main():
     validate_recipes(recipes)
 
     template = TEMPLATE.read_text(encoding="utf-8")
+    params = parse_grid_params(template)
     tex_content = (
-        template
+        strip_dummy(template)
         .replace(r"\detokenize{__BOOK_TITLE__}", latex_escape("Receptář předmětů"))
-        .replace("\\end{document}", recipes_to_latex(recipes) + "\n\\end{document}")
+        .replace("\\end{document}", recipes_to_latex(recipes, params) + "\n\\end{document}")
     )
 
     compile_pdf(tex_content)
     print(f"Vytvoren receptar: {OUTPUT_PDF}")
     print(f"Vytvoren TeX:      {OUTPUT_TEX}")
     print(f"Pocet receptu:     {len(recipes)}")
+    print(f"Parametry mrizky:  cell={params['cell_size']}mm, icon={params['icon_size_mm']}mm, "
+          f"corner={params['corner']}, border={params['line_width_pt']}pt")
 
 
 if __name__ == "__main__":
