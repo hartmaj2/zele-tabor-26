@@ -23,12 +23,13 @@ try:
 except ImportError:
     sys.exit("[CHYBA] Nainstaluj knihovnu:  pip install reportlab")
 
+from sizes import BATOH_BUNKA_MM
+
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 IKONKY_DIR  = os.path.join(SCRIPT_DIR, "ikonky")
 OUTPUT_PATH = os.path.join(SCRIPT_DIR, "stickers.pdf")
 
-# Must match \batohBunkaSirka in pas_template.tex (A6 = A4/4, no scaling)
-STICKER = 22 * mm
+STICKER = BATOH_BUNKA_MM * mm
 
 A4_W, A4_H = A4
 COLS = int(A4_W // STICKER)
