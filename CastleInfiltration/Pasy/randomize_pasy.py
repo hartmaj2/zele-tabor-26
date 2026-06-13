@@ -38,9 +38,11 @@ def random_expiration(expirace_config, expired):
     return f"{d.day}.{d.month}.{d.year}"
 
 
-def pick_znameni(flat_kategorie):
-    selected = random.sample(flat_kategorie, min(3, len(flat_kategorie)))
-    return [random.choice(znaky) for znaky in selected]
+def pick_znameni(kategorie):
+    vzhled_cats = list(kategorie["vzhled"].values())
+    projev_cats = list(kategorie["projev"].values())
+    chosen = random.sample(vzhled_cats, 2) + random.sample(projev_cats, 1)
+    return [random.choice(znaky) for znaky in chosen]
 
 
 def main():
@@ -60,13 +62,6 @@ def main():
         for povolani in povolani_pool
     ]
 
-    # Flatten znameni categories
-    flat_kategorie = [
-        znaky
-        for subgroups in kategorie.values()
-        for znaky in subgroups.values()
-    ]
-
     passports = []
     for i in range(args.pocet):
         cislo = i + 1
@@ -82,7 +77,7 @@ def main():
             "expirace":       random_expiration(data["expirace"], expired),
             "povolani":       povolani,
             "surovina":       surovina,
-            "znameni":        pick_znameni(flat_kategorie),
+            "znameni":        pick_znameni(kategorie),
         }
         passports.append(passport)
         print(f"  {passport['cislo_pasu']} | {passport['povolani']:12} | {'EXPIROVÁN' if expired else 'platný':9} | {passport['expirace']}")
