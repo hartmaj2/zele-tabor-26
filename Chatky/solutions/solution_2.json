@@ -1,0 +1,1133 @@
+{
+  "buildings": {
+    "1": {
+      "capacity": 10,
+      "count": 10,
+      "gender": "M",
+      "age_min": 7,
+      "age_max": 9,
+      "age_gap": 2,
+      "participants": [
+        {
+          "id": "Brablc Ben",
+          "vek": "7",
+          "gender": "M",
+          "oddil": "8"
+        },
+        {
+          "id": "Podlipský Dominik",
+          "vek": "7",
+          "gender": "M",
+          "oddil": "8"
+        },
+        {
+          "id": "Marek Filip",
+          "vek": "8",
+          "gender": "M",
+          "oddil": "8"
+        },
+        {
+          "id": "Němec Sebastian",
+          "vek": "8",
+          "gender": "M",
+          "oddil": "K"
+        },
+        {
+          "id": "Šubrt Antonín",
+          "vek": "8",
+          "gender": "M",
+          "oddil": "H"
+        },
+        {
+          "id": "Bocksteffel Brian",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Karásek Filip",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        },
+        {
+          "id": "Karásek Max",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        },
+        {
+          "id": "Kocián Šimon",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        },
+        {
+          "id": "Kocián Štěpán",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        }
+      ]
+    },
+    "3": {
+      "capacity": 8,
+      "count": 8,
+      "gender": "M",
+      "age_min": 9,
+      "age_max": 10,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Kourek Dominik",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Muzikář Matěj",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Samec Jakub",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Šafář David",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        },
+        {
+          "id": "Valášek Jan Antonín",
+          "vek": "9",
+          "gender": "M",
+          "oddil": "7"
+        },
+        {
+          "id": "Cihlář Jakub",
+          "vek": "10",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Filip Vojtěch",
+          "vek": "10",
+          "gender": "M",
+          "oddil": "6"
+        },
+        {
+          "id": "Ota Dvid",
+          "vek": "10",
+          "gender": "M",
+          "oddil": "6"
+        }
+      ]
+    },
+    "5": {
+      "capacity": 7,
+      "count": 7,
+      "gender": "M",
+      "age_min": 11,
+      "age_max": 11,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Červencl Vojtěch",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Fiala Albert",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        },
+        {
+          "id": "Hasnedl Robin",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        },
+        {
+          "id": "Kroupa František",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        },
+        {
+          "id": "Moravec Ondřej",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        },
+        {
+          "id": "Novák Timmy",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Peter Martin",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        }
+      ]
+    },
+    "n2": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "M",
+      "age_min": 11,
+      "age_max": 12,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Skopal Bořek",
+          "vek": "11",
+          "gender": "M",
+          "oddil": "5"
+        },
+        {
+          "id": "Bačkovský Adam",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Formánek Jiří",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Hummell Michael",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Krákora Lukáš",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        }
+      ]
+    },
+    "n4": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "M",
+      "age_min": 12,
+      "age_max": 13,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Kubala Samuel",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Marek Daniel",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Prokůpek Jan",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Vávra Jakub",
+          "vek": "12",
+          "gender": "M",
+          "oddil": "4"
+        },
+        {
+          "id": "Dunovský David",
+          "vek": "13",
+          "gender": "M",
+          "oddil": "3"
+        }
+      ]
+    },
+    "n6": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "M",
+      "age_min": 13,
+      "age_max": 14,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Fiala Tadeáš",
+          "vek": "13",
+          "gender": "M",
+          "oddil": "3"
+        },
+        {
+          "id": "Grisa Michael",
+          "vek": "13",
+          "gender": "M",
+          "oddil": "3"
+        },
+        {
+          "id": "Moravec David",
+          "vek": "13",
+          "gender": "M",
+          "oddil": "3"
+        },
+        {
+          "id": "Vansa Sebastian",
+          "vek": "13",
+          "gender": "M",
+          "oddil": "3"
+        },
+        {
+          "id": "Brablc Bruno",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        }
+      ]
+    },
+    "m1": {
+      "capacity": 3,
+      "count": 3,
+      "gender": "M",
+      "age_min": 14,
+      "age_max": 14,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Eggerth Filip",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        },
+        {
+          "id": "Eggerth Kryštof",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        },
+        {
+          "id": "Šikýř Ondřej",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        }
+      ]
+    },
+    "m3": {
+      "capacity": 3,
+      "count": 3,
+      "gender": "M",
+      "age_min": 14,
+      "age_max": 14,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Šourek Pavel",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "1"
+        },
+        {
+          "id": "Valášek Marek",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        },
+        {
+          "id": "Voldán Lukáš",
+          "vek": "14",
+          "gender": "M",
+          "oddil": "2"
+        }
+      ]
+    },
+    "m5": {
+      "capacity": 3,
+      "count": 3,
+      "gender": "M",
+      "age_min": 15,
+      "age_max": 15,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Kudláček Adam",
+          "vek": "15",
+          "gender": "M",
+          "oddil": "1"
+        },
+        {
+          "id": "Provázek David",
+          "vek": "15",
+          "gender": "M",
+          "oddil": "1"
+        },
+        {
+          "id": "Taylor Benjamin William",
+          "vek": "15",
+          "gender": "M",
+          "oddil": "1"
+        }
+      ]
+    },
+    "m7": {
+      "capacity": 3,
+      "count": 1,
+      "gender": "M",
+      "age_min": 15,
+      "age_max": 15,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Urbánek David",
+          "vek": "15",
+          "gender": "M",
+          "oddil": "1"
+        }
+      ]
+    },
+    "0": {
+      "capacity": 10,
+      "count": 10,
+      "gender": "F",
+      "age_min": 6,
+      "age_max": 9,
+      "age_gap": 3,
+      "participants": [
+        {
+          "id": "Marková Nela",
+          "vek": "6",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Volf Anabella",
+          "vek": "6",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Matyiová Klára",
+          "vek": "7",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Podlisková Barbora",
+          "vek": "7",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Šimková Meda",
+          "vek": "7",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Zhejbalová Aneta",
+          "vek": "7",
+          "gender": "F",
+          "oddil": "8"
+        },
+        {
+          "id": "Kábrtová Lucie",
+          "vek": "8",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Kůsová Ella",
+          "vek": "8",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Plecháčová Liliana",
+          "vek": "8",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Edebhagba Karolína",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "6"
+        }
+      ]
+    },
+    "4": {
+      "capacity": 9,
+      "count": 9,
+      "gender": "F",
+      "age_min": 9,
+      "age_max": 10,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Kučerová Johana",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "6"
+        },
+        {
+          "id": "Petrová Adriana",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Podlisková Alžběta",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Skopalová Štěpánka",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "7"
+        },
+        {
+          "id": "Smolíková Tereza",
+          "vek": "9",
+          "gender": "F",
+          "oddil": "6"
+        },
+        {
+          "id": "Bělohubá Nikol",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "6"
+        },
+        {
+          "id": "Hradecká Mia",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "6"
+        },
+        {
+          "id": "Karásková Lucie",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Karhanová Robin",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "6"
+        }
+      ]
+    },
+    "2": {
+      "capacity": 7,
+      "count": 7,
+      "gender": "F",
+      "age_min": 10,
+      "age_max": 12,
+      "age_gap": 2,
+      "participants": [
+        {
+          "id": "Lísková Julie",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Nováková Mia",
+          "vek": "10",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Havelková Zuzana",
+          "vek": "11",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Líznerová Klára",
+          "vek": "11",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Wasserburger Anna",
+          "vek": "11",
+          "gender": "F",
+          "oddil": "5"
+        },
+        {
+          "id": "Dobešová Josefina",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Hanková Aneta",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        }
+      ]
+    },
+    "n1": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "F",
+      "age_min": 12,
+      "age_max": 12,
+      "age_gap": 0,
+      "participants": [
+        {
+          "id": "Hurinová Klára",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Karásková Laura",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Kociánová Anna",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Muzikářová Adéla",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "4"
+        },
+        {
+          "id": "Samcova Tereza",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        }
+      ]
+    },
+    "n3": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "F",
+      "age_min": 12,
+      "age_max": 13,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Šafářová Sofie",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "4"
+        },
+        {
+          "id": "Wasserburger Sofie",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Záveská Aneta",
+          "vek": "12",
+          "gender": "F",
+          "oddil": "3"
+        },
+        {
+          "id": "Dvoriščáková Karin",
+          "vek": "13",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Klímová Karolína",
+          "vek": "13",
+          "gender": "F",
+          "oddil": "2"
+        }
+      ]
+    },
+    "n5": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "F",
+      "age_min": 13,
+      "age_max": 14,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Obermannová Eliška",
+          "vek": "13",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Cihlářová Kristina",
+          "vek": "14",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Kargerová Sofie",
+          "vek": "14",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Kosková Jana",
+          "vek": "14",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Myrdaczová Anna",
+          "vek": "14",
+          "gender": "F",
+          "oddil": "2"
+        }
+      ]
+    },
+    "n7": {
+      "capacity": 5,
+      "count": 5,
+      "gender": "F",
+      "age_min": 14,
+      "age_max": 15,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Stránská Valerie",
+          "vek": "14",
+          "gender": "F",
+          "oddil": "2"
+        },
+        {
+          "id": "Králíková Eliška",
+          "vek": "15",
+          "gender": "F",
+          "oddil": "1"
+        },
+        {
+          "id": "Legnerová Jolana",
+          "vek": "15",
+          "gender": "F",
+          "oddil": "1"
+        },
+        {
+          "id": "Nácovská Viola",
+          "vek": "15",
+          "gender": "F",
+          "oddil": "1"
+        },
+        {
+          "id": "Otová Tereza",
+          "vek": "15",
+          "gender": "F",
+          "oddil": "1"
+        }
+      ]
+    },
+    "m2": {
+      "capacity": 3,
+      "count": 3,
+      "gender": "F",
+      "age_min": 15,
+      "age_max": 16,
+      "age_gap": 1,
+      "participants": [
+        {
+          "id": "Vlasáková Veronika",
+          "vek": "15",
+          "gender": "F",
+          "oddil": "1"
+        },
+        {
+          "id": "Hoznourová Stela",
+          "vek": "16",
+          "gender": "F",
+          "oddil": "1"
+        },
+        {
+          "id": "Šikýřová Nela",
+          "vek": "16",
+          "gender": "F",
+          "oddil": "1"
+        }
+      ]
+    }
+  },
+  "participants": {
+    "Brablc Ben": "1",
+    "Podlipský Dominik": "1",
+    "Marek Filip": "1",
+    "Němec Sebastian": "1",
+    "Šubrt Antonín": "1",
+    "Bocksteffel Brian": "1",
+    "Karásek Filip": "1",
+    "Karásek Max": "1",
+    "Kocián Šimon": "1",
+    "Kocián Štěpán": "1",
+    "Kourek Dominik": "3",
+    "Muzikář Matěj": "3",
+    "Samec Jakub": "3",
+    "Šafář David": "3",
+    "Valášek Jan Antonín": "3",
+    "Cihlář Jakub": "3",
+    "Filip Vojtěch": "3",
+    "Ota Dvid": "3",
+    "Červencl Vojtěch": "5",
+    "Fiala Albert": "5",
+    "Hasnedl Robin": "5",
+    "Kroupa František": "5",
+    "Moravec Ondřej": "5",
+    "Novák Timmy": "5",
+    "Peter Martin": "5",
+    "Skopal Bořek": "n2",
+    "Bačkovský Adam": "n2",
+    "Formánek Jiří": "n2",
+    "Hummell Michael": "n2",
+    "Krákora Lukáš": "n2",
+    "Kubala Samuel": "n4",
+    "Marek Daniel": "n4",
+    "Prokůpek Jan": "n4",
+    "Vávra Jakub": "n4",
+    "Dunovský David": "n4",
+    "Fiala Tadeáš": "n6",
+    "Grisa Michael": "n6",
+    "Moravec David": "n6",
+    "Vansa Sebastian": "n6",
+    "Brablc Bruno": "n6",
+    "Eggerth Filip": "m1",
+    "Eggerth Kryštof": "m1",
+    "Šikýř Ondřej": "m1",
+    "Šourek Pavel": "m3",
+    "Valášek Marek": "m3",
+    "Voldán Lukáš": "m3",
+    "Kudláček Adam": "m5",
+    "Provázek David": "m5",
+    "Taylor Benjamin William": "m5",
+    "Urbánek David": "m7",
+    "Marková Nela": "0",
+    "Volf Anabella": "0",
+    "Matyiová Klára": "0",
+    "Podlisková Barbora": "0",
+    "Šimková Meda": "0",
+    "Zhejbalová Aneta": "0",
+    "Kábrtová Lucie": "0",
+    "Kůsová Ella": "0",
+    "Plecháčová Liliana": "0",
+    "Edebhagba Karolína": "0",
+    "Kučerová Johana": "4",
+    "Petrová Adriana": "4",
+    "Podlisková Alžběta": "4",
+    "Skopalová Štěpánka": "4",
+    "Smolíková Tereza": "4",
+    "Bělohubá Nikol": "4",
+    "Hradecká Mia": "4",
+    "Karásková Lucie": "4",
+    "Karhanová Robin": "4",
+    "Lísková Julie": "2",
+    "Nováková Mia": "2",
+    "Havelková Zuzana": "2",
+    "Líznerová Klára": "2",
+    "Wasserburger Anna": "2",
+    "Dobešová Josefina": "2",
+    "Hanková Aneta": "2",
+    "Hurinová Klára": "n1",
+    "Karásková Laura": "n1",
+    "Kociánová Anna": "n1",
+    "Muzikářová Adéla": "n1",
+    "Samcova Tereza": "n1",
+    "Šafářová Sofie": "n3",
+    "Wasserburger Sofie": "n3",
+    "Záveská Aneta": "n3",
+    "Dvoriščáková Karin": "n3",
+    "Klímová Karolína": "n3",
+    "Obermannová Eliška": "n5",
+    "Cihlářová Kristina": "n5",
+    "Kargerová Sofie": "n5",
+    "Kosková Jana": "n5",
+    "Myrdaczová Anna": "n5",
+    "Stránská Valerie": "n7",
+    "Králíková Eliška": "n7",
+    "Legnerová Jolana": "n7",
+    "Nácovská Viola": "n7",
+    "Otová Tereza": "n7",
+    "Vlasáková Veronika": "m2",
+    "Hoznourová Stela": "m2",
+    "Šikýřová Nela": "m2"
+  },
+  "satisfied_edges": [
+    {
+      "source": "Červencl Vojtěch",
+      "target": "Novák Timmy"
+    },
+    {
+      "source": "Dobešová Josefina",
+      "target": "Hanková Aneta"
+    },
+    {
+      "source": "Dvoriščáková Karin",
+      "target": "Klímová Karolína"
+    },
+    {
+      "source": "Dvoriščáková Karin",
+      "target": "Wasserburger Sofie"
+    },
+    {
+      "source": "Eggerth Filip",
+      "target": "Eggerth Kryštof"
+    },
+    {
+      "source": "Eggerth Kryštof",
+      "target": "Eggerth Filip"
+    },
+    {
+      "source": "Fiala Albert",
+      "target": "Moravec Ondřej"
+    },
+    {
+      "source": "Fiala Albert",
+      "target": "Peter Martin"
+    },
+    {
+      "source": "Fiala Tadeáš",
+      "target": "Vansa Sebastian"
+    },
+    {
+      "source": "Hanková Aneta",
+      "target": "Dobešová Josefina"
+    },
+    {
+      "source": "Hradecká Mia",
+      "target": "Petrová Adriana"
+    },
+    {
+      "source": "Hurinová Klára",
+      "target": "Samcova Tereza"
+    },
+    {
+      "source": "Hurinová Klára",
+      "target": "Karásková Laura"
+    },
+    {
+      "source": "Hurinová Klára",
+      "target": "Kociánová Anna"
+    },
+    {
+      "source": "Kábrtová Lucie",
+      "target": "Kůsová Ella"
+    },
+    {
+      "source": "Kábrtová Lucie",
+      "target": "Plecháčová Liliana"
+    },
+    {
+      "source": "Karásek Filip",
+      "target": "Karásek Max"
+    },
+    {
+      "source": "Karásková Laura",
+      "target": "Hurinová Klára"
+    },
+    {
+      "source": "Karásková Laura",
+      "target": "Samcova Tereza"
+    },
+    {
+      "source": "Klímová Karolína",
+      "target": "Dvoriščáková Karin"
+    },
+    {
+      "source": "Kocián Šimon",
+      "target": "Kocián Štěpán"
+    },
+    {
+      "source": "Kocián Štěpán",
+      "target": "Kocián Šimon"
+    },
+    {
+      "source": "Kociánová Anna",
+      "target": "Samcova Tereza"
+    },
+    {
+      "source": "Kociánová Anna",
+      "target": "Karásková Laura"
+    },
+    {
+      "source": "Kociánová Anna",
+      "target": "Hurinová Klára"
+    },
+    {
+      "source": "Kudláček Adam",
+      "target": "Taylor Benjamin William"
+    },
+    {
+      "source": "Kudláček Adam",
+      "target": "Provázek David"
+    },
+    {
+      "source": "Kůsová Ella",
+      "target": "Kábrtová Lucie"
+    },
+    {
+      "source": "Lísková Julie",
+      "target": "Nováková Mia"
+    },
+    {
+      "source": "Matyiová Klára",
+      "target": "Volf Anabella"
+    },
+    {
+      "source": "Moravec Ondřej",
+      "target": "Fiala Albert"
+    },
+    {
+      "source": "Moravec Ondřej",
+      "target": "Peter Martin"
+    },
+    {
+      "source": "Muzikář Matěj",
+      "target": "Samec Jakub"
+    },
+    {
+      "source": "Muzikář Matěj",
+      "target": "Šafář David"
+    },
+    {
+      "source": "Nácovská Viola",
+      "target": "Králíková Eliška"
+    },
+    {
+      "source": "Nováková Mia",
+      "target": "Lísková Julie"
+    },
+    {
+      "source": "Ota Dvid",
+      "target": "Šafář David"
+    },
+    {
+      "source": "Peter Martin",
+      "target": "Moravec Ondřej"
+    },
+    {
+      "source": "Peter Martin",
+      "target": "Fiala Albert"
+    },
+    {
+      "source": "Plecháčová Liliana",
+      "target": "Kůsová Ella"
+    },
+    {
+      "source": "Plecháčová Liliana",
+      "target": "Kábrtová Lucie"
+    },
+    {
+      "source": "Podlisková Barbora",
+      "target": "Šimková Meda"
+    },
+    {
+      "source": "Provázek David",
+      "target": "Kudláček Adam"
+    },
+    {
+      "source": "Provázek David",
+      "target": "Taylor Benjamin William"
+    },
+    {
+      "source": "Samcova Tereza",
+      "target": "Karásková Laura"
+    },
+    {
+      "source": "Samcova Tereza",
+      "target": "Hurinová Klára"
+    },
+    {
+      "source": "Samcova Tereza",
+      "target": "Kociánová Anna"
+    },
+    {
+      "source": "Samec Jakub",
+      "target": "Muzikář Matěj"
+    },
+    {
+      "source": "Skopalová Štěpánka",
+      "target": "Hradecká Mia"
+    },
+    {
+      "source": "Skopalová Štěpánka",
+      "target": "Smolíková Tereza"
+    },
+    {
+      "source": "Skopalová Štěpánka",
+      "target": "Petrová Adriana"
+    },
+    {
+      "source": "Stránská Valerie",
+      "target": "Otová Tereza"
+    },
+    {
+      "source": "Šimková Meda",
+      "target": "Podlisková Barbora"
+    },
+    {
+      "source": "Vansa Sebastian",
+      "target": "Fiala Tadeáš"
+    },
+    {
+      "source": "Vlasáková Veronika",
+      "target": "Hoznourová Stela"
+    },
+    {
+      "source": "Wasserburger Sofie",
+      "target": "Šafářová Sofie"
+    },
+    {
+      "source": "Wasserburger Sofie",
+      "target": "Klímová Karolína"
+    },
+    {
+      "source": "Zhejbalová Aneta",
+      "target": "Podlisková Barbora"
+    },
+    {
+      "source": "Zhejbalová Aneta",
+      "target": "Šimková Meda"
+    }
+  ],
+  "unassigned": [],
+  "stats": {
+    "total_participants": 99,
+    "assigned": 99,
+    "unassigned_count": 0,
+    "total_preference_edges": 157,
+    "satisfied_preference_edges": 59,
+    "participants_with_friend": 50,
+    "mutual_pairs_satisfied": 19
+  },
+  "strategy": {
+    "index": 2,
+    "name": "Age-greedy, reversed gender split",
+    "reverse": true,
+    "seed": null
+  }
+}

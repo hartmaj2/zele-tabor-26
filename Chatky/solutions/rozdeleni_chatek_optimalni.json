@@ -1,0 +1,1062 @@
+[
+  {
+    "cabin_name": "0",
+    "capacity": 10,
+    "members": [
+      {
+        "name": "Brablc Bruno",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": []
+      },
+      {
+        "name": "Dunovský David",
+        "age": 13,
+        "gender": "M",
+        "oddil": "3",
+        "wishes": [
+          "Formánek Jiří",
+          "Moravec David"
+        ]
+      },
+      {
+        "name": "Fiala Tadeáš",
+        "age": 13,
+        "gender": "M",
+        "oddil": "3",
+        "wishes": [
+          "Vansa Sebastian"
+        ]
+      },
+      {
+        "name": "Formánek Jiří",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": [
+          "Dunovský David"
+        ]
+      },
+      {
+        "name": "Moravec David",
+        "age": 13,
+        "gender": "M",
+        "oddil": "3",
+        "wishes": [
+          "Dunovský David",
+          "Formánek Jiří"
+        ]
+      },
+      {
+        "name": "Šikýř Ondřej ",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": [
+          "Voldán Lukáš",
+          "Brablc Bruno",
+          "Valášek Marek"
+        ]
+      },
+      {
+        "name": "Valášek Marek",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": []
+      },
+      {
+        "name": "Vansa Sebastian",
+        "age": 13,
+        "gender": "M",
+        "oddil": "3",
+        "wishes": [
+          "Fiala Tadeáš"
+        ]
+      },
+      {
+        "name": "Voldán Lukáš",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": [
+          "Brablc Bruno"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "1",
+    "capacity": 10,
+    "members": [
+      {
+        "name": "Valášek Jan Antonín ",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": []
+      },
+      {
+        "name": "Karásek Filip ",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": [
+          "Karásek Max"
+        ]
+      },
+      {
+        "name": "Karásek Max",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": [
+          "Karásek Filip "
+        ]
+      },
+      {
+        "name": "Kocián Šimon",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": [
+          "Kocián Štěpán",
+          "Samec Jakub"
+        ]
+      },
+      {
+        "name": "Kocián Štěpán",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": [
+          "Kocián Šimon",
+          "Samec Jakub"
+        ]
+      },
+      {
+        "name": "Muzikář Matěj ",
+        "age": 9,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": [
+          "Samec Jakub",
+          "Kocián Šimon",
+          "Kocián Štěpán",
+          "Šafář David"
+        ]
+      },
+      {
+        "name": "Ota Dvid",
+        "age": 10,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": [
+          "Šafář David"
+        ]
+      },
+      {
+        "name": "Samec Jakub",
+        "age": 9,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": [
+          "Muzikář Matěj ",
+          "Kocián Štěpán",
+          "Kocián Šimon"
+        ]
+      },
+      {
+        "name": "Šafář David",
+        "age": 9,
+        "gender": "M",
+        "oddil": "7",
+        "wishes": [
+          "Šubrt Antonín"
+        ]
+      },
+      {
+        "name": "Šubrt Antonín",
+        "age": 8,
+        "gender": "M",
+        "oddil": "H",
+        "wishes": [
+          "Valášek Jan Antonín ",
+          "Šafář David"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "4",
+    "capacity": 9,
+    "members": [
+      {
+        "name": "Bačkovský Adam",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": [
+          "Prokůpek Jan",
+          "Grisa Michael "
+        ]
+      },
+      {
+        "name": "Červencl Vojtěch ",
+        "age": 11,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": [
+          "Novák Timmy"
+        ]
+      },
+      {
+        "name": "Grisa Michael ",
+        "age": 13,
+        "gender": "M",
+        "oddil": "3",
+        "wishes": [
+          "Prokůpek Jan",
+          "Bačkovský Adam"
+        ]
+      },
+      {
+        "name": "Hasnedl Robin ",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": [
+          "Skopal Bořek",
+          "Kubala Samuel "
+        ]
+      },
+      {
+        "name": "Kubala Samuel ",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": [
+          "Skopal Bořek",
+          "Hasnedl Robin "
+        ]
+      },
+      {
+        "name": "Novák Timmy",
+        "age": 11,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": []
+      },
+      {
+        "name": "Prokůpek Jan",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": [
+          "Bačkovský Adam",
+          "Grisa Michael "
+        ]
+      },
+      {
+        "name": "Skopal Bořek",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": [
+          "Kubala Samuel ",
+          "Hasnedl Robin "
+        ]
+      },
+      {
+        "name": "Marek Daniel",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "3",
+    "capacity": 8,
+    "members": [
+      {
+        "name": "Fiala Albert",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": [
+          "Filip Vojtěch",
+          "Moravec Ondřej ",
+          "Peter Martin "
+        ]
+      },
+      {
+        "name": "Filip Vojtěch",
+        "age": 10,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": [
+          "Peter Martin ",
+          "Moravec Ondřej "
+        ]
+      },
+      {
+        "name": "Moravec Ondřej ",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": [
+          "Filip Vojtěch",
+          "Fiala Albert",
+          "Peter Martin "
+        ]
+      },
+      {
+        "name": "Peter Martin ",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": [
+          "Moravec Ondřej ",
+          "Fiala Albert",
+          "Filip Vojtěch"
+        ]
+      },
+      {
+        "name": "Kroupa František",
+        "age": 11,
+        "gender": "M",
+        "oddil": "5",
+        "wishes": []
+      },
+      {
+        "name": "Krákora Lukáš",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": []
+      },
+      {
+        "name": "Vávra Jakub",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": []
+      },
+      {
+        "name": "Hummell Michael ",
+        "age": 12,
+        "gender": "M",
+        "oddil": "4",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "2",
+    "capacity": 7,
+    "members": [
+      {
+        "name": "Bocksteffel Brian ",
+        "age": 9,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": []
+      },
+      {
+        "name": "Kourek Dominik ",
+        "age": 9,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": [
+          "Bocksteffel Brian "
+        ]
+      },
+      {
+        "name": "Cihlář Jakub",
+        "age": 10,
+        "gender": "M",
+        "oddil": "6",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "5",
+    "capacity": 7,
+    "members": [
+      {
+        "name": "Eggerth Filip",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": [
+          "Eggerth Kryštof ",
+          "Brablc Bruno"
+        ]
+      },
+      {
+        "name": "Eggerth Kryštof ",
+        "age": 14,
+        "gender": "M",
+        "oddil": "2",
+        "wishes": [
+          "Eggerth Filip",
+          "Brablc Bruno"
+        ]
+      },
+      {
+        "name": "Kudláček Adam",
+        "age": 15,
+        "gender": "M",
+        "oddil": "1",
+        "wishes": [
+          "Taylor Benjamin William ",
+          "Šourek Pavel ",
+          "Urbánek David",
+          "Provázek David"
+        ]
+      },
+      {
+        "name": "Provázek David",
+        "age": 15,
+        "gender": "M",
+        "oddil": "1",
+        "wishes": [
+          "Urbánek David",
+          "Šourek Pavel ",
+          "Kudláček Adam",
+          "Taylor Benjamin William "
+        ]
+      },
+      {
+        "name": "Šourek Pavel ",
+        "age": 14,
+        "gender": "M",
+        "oddil": "1",
+        "wishes": [
+          "Urbánek David",
+          "Kudláček Adam",
+          "Taylor Benjamin William "
+        ]
+      },
+      {
+        "name": "Taylor Benjamin William ",
+        "age": 15,
+        "gender": "M",
+        "oddil": "1",
+        "wishes": [
+          "Šourek Pavel ",
+          "Urbánek David"
+        ]
+      },
+      {
+        "name": "Urbánek David",
+        "age": 15,
+        "gender": "M",
+        "oddil": "1",
+        "wishes": [
+          "Šourek Pavel ",
+          "Kudláček Adam",
+          "Taylor Benjamin William "
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "n1",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Hradecká Mia",
+        "age": 10,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": [
+          "Petrová Adriana"
+        ]
+      },
+      {
+        "name": "Petrová Adriana",
+        "age": 9,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": []
+      },
+      {
+        "name": "Skopalová Štěpánka",
+        "age": 9,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": [
+          "Hradecká Mia",
+          "Smolíková Tereza",
+          "Petrová Adriana"
+        ]
+      },
+      {
+        "name": "Smolíková Tereza",
+        "age": 9,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": []
+      },
+      {
+        "name": "Karhanová Robin ",
+        "age": 10,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "n6",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Kábrtová Lucie",
+        "age": 8,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": [
+          "Kůsová Ella ",
+          "Plecháčová Liliana"
+        ]
+      },
+      {
+        "name": "Kůsová Ella ",
+        "age": 8,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": [
+          "Kábrtová Lucie"
+        ]
+      },
+      {
+        "name": "Plecháčová Liliana",
+        "age": 8,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": [
+          "Kůsová Ella ",
+          "Kábrtová Lucie"
+        ]
+      },
+      {
+        "name": "Podlisková Alžběta ",
+        "age": 9,
+        "gender": "F",
+        "oddil": "7",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "n5",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Dvoriščáková Karin",
+        "age": 13,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Obermannová Eliška",
+          "Klímová Karolína",
+          "Wasserburger Anna",
+          "Wasserburger Sofie"
+        ]
+      },
+      {
+        "name": "Klímová Karolína",
+        "age": 13,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Dvoriščáková Karin",
+          "Obermannová Eliška"
+        ]
+      },
+      {
+        "name": "Obermannová Eliška",
+        "age": 13,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Klímová Karolína"
+        ]
+      },
+      {
+        "name": "Wasserburger Sofie",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Wasserburger Anna",
+          "Klímová Karolína",
+          "Dvoriščáková Karin",
+          "Obermannová Eliška"
+        ]
+      },
+      {
+        "name": "Wasserburger Anna",
+        "age": 11,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": [
+          "Wasserburger Sofie",
+          "Klímová Karolína",
+          "Dvoriščáková Karin",
+          "Obermannová Eliška"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "n4",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Karásková Lucie",
+        "age": 10,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": [
+          "Lísková Julie",
+          "Nováková Mia"
+        ]
+      },
+      {
+        "name": "Lísková Julie",
+        "age": 10,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": [
+          "Nováková Mia",
+          "Karásková Lucie"
+        ]
+      },
+      {
+        "name": "Nováková Mia",
+        "age": 10,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": [
+          "Lísková Julie",
+          "Karásková Lucie"
+        ]
+      },
+      {
+        "name": "Havelková Zuzana ",
+        "age": 11,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "n3",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Cihlářová Kristina ",
+        "age": 14,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Stránská Valerie"
+        ]
+      },
+      {
+        "name": "Hoznourová Stela",
+        "age": 16,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Otová Tereza"
+        ]
+      },
+      {
+        "name": "Otová Tereza",
+        "age": 15,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Hoznourová Stela"
+        ]
+      },
+      {
+        "name": "Stránská Valerie",
+        "age": 14,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Vlasáková Veronika",
+          "Cihlářová Kristina ",
+          "Otová Tereza",
+          "Hoznourová Stela"
+        ]
+      },
+      {
+        "name": "Vlasáková Veronika",
+        "age": 15,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Otová Tereza",
+          "Hoznourová Stela",
+          "Stránská Valerie",
+          "Cihlářová Kristina "
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "n2",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Dobešová Josefina",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Kociánová Anna ",
+          "Samcova Tereza",
+          "Hanková Aneta",
+          "Hurinová Klára",
+          "Karásková Laura"
+        ]
+      },
+      {
+        "name": "Hanková Aneta",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Hurinová Klára",
+          "Karásková Laura",
+          "Kociánová Anna ",
+          "Josefína Dobešová"
+        ]
+      },
+      {
+        "name": "Hurinová Klára",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Samcova Tereza",
+          "Karásková Laura",
+          "Hanková Aneta",
+          "Dobešová Josefina",
+          "Kociánová Anna "
+        ]
+      },
+      {
+        "name": "Kociánová Anna ",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Samcova Tereza",
+          "Dobešová Josefina",
+          "Hanková Aneta",
+          "Karásková Laura",
+          "Hurinová Klára"
+        ]
+      },
+      {
+        "name": "Samcova Tereza",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Karásková Laura",
+          "Hurinová Klára",
+          "Kociánová Anna ",
+          "Dobešová Josefina",
+          "Hanková Aneta"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "n7",
+    "capacity": 5,
+    "members": [
+      {
+        "name": "Líznerová Klára",
+        "age": 11,
+        "gender": "F",
+        "oddil": "5",
+        "wishes": []
+      },
+      {
+        "name": "Muzikářová Adéla",
+        "age": 12,
+        "gender": "F",
+        "oddil": "4",
+        "wishes": [
+          "Líznerová Klára"
+        ]
+      },
+      {
+        "name": "Šafářová Sofie",
+        "age": 12,
+        "gender": "F",
+        "oddil": "4",
+        "wishes": []
+      },
+      {
+        "name": "Karásková Laura",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Hurinová Klára",
+          "Samcova Tereza"
+        ]
+      },
+      {
+        "name": "Záveská Aneta",
+        "age": 12,
+        "gender": "F",
+        "oddil": "3",
+        "wishes": [
+          "Otová Tereza"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "m8",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Myrdaczová Anna",
+        "age": 14,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Šikýřová Nela"
+        ]
+      },
+      {
+        "name": "Šikýřová Nela",
+        "age": 16,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Myrdaczová Anna"
+        ]
+      },
+      {
+        "name": "Kosková Jana ",
+        "age": 14,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Cihlářová Kristina "
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "m9",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Matyiová Klára",
+        "age": 7,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": [
+          "Volf Anabella "
+        ]
+      },
+      {
+        "name": "Volf Anabella ",
+        "age": 6,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": []
+      },
+      {
+        "name": "Marková Nela",
+        "age": 6,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "m10",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Němec Sebastian ",
+        "age": 8,
+        "gender": "M",
+        "oddil": "K",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "m7",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Edebhagba Karolína ",
+        "age": 9,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": [
+          "Kučerová Johana"
+        ]
+      },
+      {
+        "name": "Kučerová Johana",
+        "age": 9,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": [
+          "Edebhagba Karolína "
+        ]
+      },
+      {
+        "name": "Bělohubá Nikol",
+        "age": 10,
+        "gender": "F",
+        "oddil": "6",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "m5",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Brablc Ben",
+        "age": 7,
+        "gender": "M",
+        "oddil": "8",
+        "wishes": [
+          "Brablc Bruno"
+        ]
+      },
+      {
+        "name": "Podlipský Dominik",
+        "age": 7,
+        "gender": "M",
+        "oddil": "8",
+        "wishes": []
+      },
+      {
+        "name": "Marek Filip",
+        "age": 8,
+        "gender": "M",
+        "oddil": "8",
+        "wishes": []
+      }
+    ]
+  },
+  {
+    "cabin_name": "m4",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Králíková Eliška",
+        "age": 15,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": []
+      },
+      {
+        "name": "Nácovská Viola ",
+        "age": 15,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Králíková Eliška"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "m3",
+    "capacity": 3,
+    "members": []
+  },
+  {
+    "cabin_name": "m2",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Kargerová Sofie",
+        "age": 14,
+        "gender": "F",
+        "oddil": "2",
+        "wishes": [
+          "Legnerová Jolana",
+          "Stránská Valerie"
+        ]
+      },
+      {
+        "name": "Legnerová Jolana",
+        "age": 15,
+        "gender": "F",
+        "oddil": "1",
+        "wishes": [
+          "Kargerová Sofie"
+        ]
+      }
+    ]
+  },
+  {
+    "cabin_name": "m1",
+    "capacity": 3,
+    "members": []
+  },
+  {
+    "cabin_name": "m6",
+    "capacity": 3,
+    "members": [
+      {
+        "name": "Podlisková Barbora",
+        "age": 7,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": [
+          "Šimková Meda"
+        ]
+      },
+      {
+        "name": "Šimková Meda",
+        "age": 7,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": [
+          "Podlisková Barbora"
+        ]
+      },
+      {
+        "name": "Zhejbalová Aneta",
+        "age": 7,
+        "gender": "F",
+        "oddil": "8",
+        "wishes": [
+          "Podlisková Barbora",
+          "Šimková Meda"
+        ]
+      }
+    ]
+  }
+]

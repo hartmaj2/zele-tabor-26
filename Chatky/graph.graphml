@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="node" attr.name="gender" attr.type="string" />
+  <key id="d1" for="node" attr.name="vek" attr.type="string" />
+  <key id="d0" for="node" attr.name="oddil" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Bačkovský Adam">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Bělohubá Nikol">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Bocksteffel Brian">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Brablc Ben">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Brablc Bruno">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Cihlář Jakub">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Cihlářová Kristina">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Červencl Vojtěch">
+      <data key="d0">4</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Dobešová Josefina">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Dunovský David">
+      <data key="d0">3</data>
+      <data key="d1">13</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Dvoriščáková Karin">
+      <data key="d0">2</data>
+      <data key="d1">13</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Edebhagba Karolína">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Eggerth Filip">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Eggerth Kryštof">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Fiala Albert">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Fiala Tadeáš">
+      <data key="d0">3</data>
+      <data key="d1">13</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Filip Vojtěch">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Formánek Jiří">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Grisa Michael">
+      <data key="d0">3</data>
+      <data key="d1">13</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Hanková Aneta">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Hasnedl Robin">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Havelková Zuzana">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Hoznourová Stela">
+      <data key="d0">1</data>
+      <data key="d1">16</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Hradecká Mia">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Hummell Michael">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Hurinová Klára">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kábrtová Lucie">
+      <data key="d0">7</data>
+      <data key="d1">8</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Karásek Filip">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Karásek Max">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Karásková Laura">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Karásková Lucie">
+      <data key="d0">5</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kargerová Sofie">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Karhanová Robin">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Klímová Karolína">
+      <data key="d0">2</data>
+      <data key="d1">13</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kocián Šimon">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Kocián Štěpán">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Kociánová Anna">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kosková Jana">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kourek Dominik">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Krákora Lukáš">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Králíková Eliška">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kroupa František">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Kubala Samuel">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Kučerová Johana">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Kudláček Adam">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Kůsová Ella">
+      <data key="d0">7</data>
+      <data key="d1">8</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Legnerová Jolana">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Lísková Julie">
+      <data key="d0">5</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Líznerová Klára">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Marek Daniel">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Marek Filip">
+      <data key="d0">8</data>
+      <data key="d1">8</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Marková Nela">
+      <data key="d0">8</data>
+      <data key="d1">6</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Matyiová Klára">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Moravec David">
+      <data key="d0">3</data>
+      <data key="d1">13</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Moravec Ondřej">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Muzikář Matěj">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Muzikářová Adéla">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Myrdaczová Anna">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Nácovská Viola">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Němec Sebastian">
+      <data key="d0">K</data>
+      <data key="d1">8</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Novák Timmy">
+      <data key="d0">4</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Nováková Mia">
+      <data key="d0">5</data>
+      <data key="d1">10</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Obermannová Eliška">
+      <data key="d0">2</data>
+      <data key="d1">13</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Ota Dvid">
+      <data key="d0">6</data>
+      <data key="d1">10</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Otová Tereza">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Peter Martin">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Petrová Adriana">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Plecháčová Liliana">
+      <data key="d0">7</data>
+      <data key="d1">8</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Podlipský Dominik">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Podlisková Alžběta">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Podlisková Barbora">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Prokůpek Jan">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Provázek David">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Samcova Tereza">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Samec Jakub">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Skopal Bořek">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Skopalová Štěpánka">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Smolíková Tereza">
+      <data key="d0">6</data>
+      <data key="d1">9</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Stránská Valerie">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Šafář David">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Šafářová Sofie">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Šikýř Ondřej">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Šikýřová Nela">
+      <data key="d0">1</data>
+      <data key="d1">16</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Šimková Meda">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Šourek Pavel">
+      <data key="d0">1</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Šubrt Antonín">
+      <data key="d0">H</data>
+      <data key="d1">8</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Taylor Benjamin William">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Urbánek David">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Valášek Jan Antonín">
+      <data key="d0">7</data>
+      <data key="d1">9</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Valášek Marek">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Vansa Sebastian">
+      <data key="d0">3</data>
+      <data key="d1">13</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Vávra Jakub">
+      <data key="d0">4</data>
+      <data key="d1">12</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Vlasáková Veronika">
+      <data key="d0">1</data>
+      <data key="d1">15</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Voldán Lukáš">
+      <data key="d0">2</data>
+      <data key="d1">14</data>
+      <data key="d2">M</data>
+    </node>
+    <node id="Volf Anabella">
+      <data key="d0">8</data>
+      <data key="d1">6</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Wasserburger Anna">
+      <data key="d0">5</data>
+      <data key="d1">11</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Wasserburger Sofie">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Záveská Aneta">
+      <data key="d0">3</data>
+      <data key="d1">12</data>
+      <data key="d2">F</data>
+    </node>
+    <node id="Zhejbalová Aneta">
+      <data key="d0">8</data>
+      <data key="d1">7</data>
+      <data key="d2">F</data>
+    </node>
+    <edge source="Bačkovský Adam" target="Prokůpek Jan" />
+    <edge source="Bačkovský Adam" target="Grisa Michael" />
+    <edge source="Červencl Vojtěch" target="Novák Timmy" />
+    <edge source="Dobešová Josefina" target="Kociánová Anna" />
+    <edge source="Dobešová Josefina" target="Samcova Tereza" />
+    <edge source="Dobešová Josefina" target="Hanková Aneta" />
+    <edge source="Dobešová Josefina" target="Hurinová Klára" />
+    <edge source="Dobešová Josefina" target="Karásková Laura" />
+    <edge source="Dunovský David" target="Formánek Jiří" />
+    <edge source="Dunovský David" target="Moravec David" />
+    <edge source="Dvoriščáková Karin" target="Obermannová Eliška" />
+    <edge source="Dvoriščáková Karin" target="Klímová Karolína" />
+    <edge source="Dvoriščáková Karin" target="Wasserburger Anna" />
+    <edge source="Dvoriščáková Karin" target="Wasserburger Sofie" />
+    <edge source="Edebhagba Karolína" target="Kučerová Johana" />
+    <edge source="Eggerth Filip" target="Eggerth Kryštof" />
+    <edge source="Eggerth Kryštof" target="Eggerth Filip" />
+    <edge source="Fiala Albert" target="Filip Vojtěch" />
+    <edge source="Fiala Albert" target="Moravec Ondřej" />
+    <edge source="Fiala Albert" target="Peter Martin" />
+    <edge source="Fiala Tadeáš" target="Vansa Sebastian" />
+    <edge source="Filip Vojtěch" target="Peter Martin" />
+    <edge source="Filip Vojtěch" target="Eggerth Filip" />
+    <edge source="Filip Vojtěch" target="Moravec Ondřej" />
+    <edge source="Formánek Jiří" target="Dunovský David" />
+    <edge source="Grisa Michael" target="Prokůpek Jan" />
+    <edge source="Grisa Michael" target="Bačkovský Adam" />
+    <edge source="Hanková Aneta" target="Cihlářová Kristina" />
+    <edge source="Hanková Aneta" target="Hurinová Klára" />
+    <edge source="Hanková Aneta" target="Karásková Laura" />
+    <edge source="Hanková Aneta" target="Kociánová Anna" />
+    <edge source="Hanková Aneta" target="Dobešová Josefina" />
+    <edge source="Hasnedl Robin" target="Skopal Bořek" />
+    <edge source="Hasnedl Robin" target="Kubala Samuel" />
+    <edge source="Hoznourová Stela" target="Otová Tereza" />
+    <edge source="Hradecká Mia" target="Petrová Adriana" />
+    <edge source="Hurinová Klára" target="Samcova Tereza" />
+    <edge source="Hurinová Klára" target="Karásková Laura" />
+    <edge source="Hurinová Klára" target="Hanková Aneta" />
+    <edge source="Hurinová Klára" target="Dobešová Josefina" />
+    <edge source="Hurinová Klára" target="Kociánová Anna" />
+    <edge source="Kábrtová Lucie" target="Kůsová Ella" />
+    <edge source="Kábrtová Lucie" target="Plecháčová Liliana" />
+    <edge source="Karásek Filip" target="Karásek Max" />
+    <edge source="Karásek Max" target="Filip Vojtěch" />
+    <edge source="Karásková Laura" target="Hurinová Klára" />
+    <edge source="Karásková Laura" target="Samcova Tereza" />
+    <edge source="Karásková Lucie" target="Lísková Julie" />
+    <edge source="Karásková Lucie" target="Nováková Mia" />
+    <edge source="Kargerová Sofie" target="Legnerová Jolana" />
+    <edge source="Kargerová Sofie" target="Stránská Valerie" />
+    <edge source="Kargerová Sofie" target="Otová Tereza" />
+    <edge source="Klímová Karolína" target="Dvoriščáková Karin" />
+    <edge source="Kocián Šimon" target="Kocián Štěpán" />
+    <edge source="Kocián Šimon" target="Samec Jakub" />
+    <edge source="Kocián Šimon" target="Šikýř Ondřej" />
+    <edge source="Kocián Štěpán" target="Kocián Šimon" />
+    <edge source="Kocián Štěpán" target="Samec Jakub" />
+    <edge source="Kocián Štěpán" target="Šikýř Ondřej" />
+    <edge source="Kociánová Anna" target="Samcova Tereza" />
+    <edge source="Kociánová Anna" target="Dobešová Josefina" />
+    <edge source="Kociánová Anna" target="Hanková Aneta" />
+    <edge source="Kociánová Anna" target="Karásková Laura" />
+    <edge source="Kociánová Anna" target="Hurinová Klára" />
+    <edge source="Kosková Jana" target="Cihlář Jakub" />
+    <edge source="Kourek Dominik" target="Bocksteffel Brian" />
+    <edge source="Kubala Samuel" target="Skopal Bořek" />
+    <edge source="Kubala Samuel" target="Hasnedl Robin" />
+    <edge source="Kučerová Johana" target="Edebhagba Karolína" />
+    <edge source="Kudláček Adam" target="Filip Vojtěch" />
+    <edge source="Kudláček Adam" target="Taylor Benjamin William" />
+    <edge source="Kudláček Adam" target="Šourek Pavel" />
+    <edge source="Kudláček Adam" target="Urbánek David" />
+    <edge source="Kudláček Adam" target="Provázek David" />
+    <edge source="Kůsová Ella" target="Kábrtová Lucie" />
+    <edge source="Legnerová Jolana" target="Kargerová Sofie" />
+    <edge source="Lísková Julie" target="Nováková Mia" />
+    <edge source="Lísková Julie" target="Karásková Lucie" />
+    <edge source="Matyiová Klára" target="Volf Anabella" />
+    <edge source="Moravec David" target="Dunovský David" />
+    <edge source="Moravec David" target="Formánek Jiří" />
+    <edge source="Moravec Ondřej" target="Eggerth Filip" />
+    <edge source="Moravec Ondřej" target="Fiala Albert" />
+    <edge source="Moravec Ondřej" target="Peter Martin" />
+    <edge source="Muzikář Matěj" target="Samec Jakub" />
+    <edge source="Muzikář Matěj" target="Kocián Šimon" />
+    <edge source="Muzikář Matěj" target="Valášek Marek" />
+    <edge source="Muzikář Matěj" target="Šafář David" />
+    <edge source="Muzikářová Adéla" target="Líznerová Klára" />
+    <edge source="Myrdaczová Anna" target="Šikýřová Nela" />
+    <edge source="Nácovská Viola" target="Králíková Eliška" />
+    <edge source="Nácovská Viola" target="Hoznourová Stela" />
+    <edge source="Nováková Mia" target="Lísková Julie" />
+    <edge source="Nováková Mia" target="Karásková Lucie" />
+    <edge source="Obermannová Eliška" target="Klímová Karolína" />
+    <edge source="Ota Dvid" target="Šafář David" />
+    <edge source="Otová Tereza" target="Hoznourová Stela" />
+    <edge source="Peter Martin" target="Moravec Ondřej" />
+    <edge source="Peter Martin" target="Fiala Albert" />
+    <edge source="Peter Martin" target="Eggerth Filip" />
+    <edge source="Plecháčová Liliana" target="Kůsová Ella" />
+    <edge source="Plecháčová Liliana" target="Kábrtová Lucie" />
+    <edge source="Podlisková Barbora" target="Šimková Meda" />
+    <edge source="Prokůpek Jan" target="Bačkovský Adam" />
+    <edge source="Prokůpek Jan" target="Grisa Michael" />
+    <edge source="Provázek David" target="Urbánek David" />
+    <edge source="Provázek David" target="Šourek Pavel" />
+    <edge source="Provázek David" target="Kudláček Adam" />
+    <edge source="Provázek David" target="Taylor Benjamin William" />
+    <edge source="Samcova Tereza" target="Karásková Laura" />
+    <edge source="Samcova Tereza" target="Hurinová Klára" />
+    <edge source="Samcova Tereza" target="Kociánová Anna" />
+    <edge source="Samcova Tereza" target="Dobešová Josefina" />
+    <edge source="Samcova Tereza" target="Hanková Aneta" />
+    <edge source="Samec Jakub" target="Muzikář Matěj" />
+    <edge source="Samec Jakub" target="Kocián Štěpán" />
+    <edge source="Samec Jakub" target="Kocián Šimon" />
+    <edge source="Skopal Bořek" target="Kubala Samuel" />
+    <edge source="Skopal Bořek" target="Hasnedl Robin" />
+    <edge source="Skopalová Štěpánka" target="Hradecká Mia" />
+    <edge source="Skopalová Štěpánka" target="Smolíková Tereza" />
+    <edge source="Skopalová Štěpánka" target="Petrová Adriana" />
+    <edge source="Stránská Valerie" target="Vlasáková Veronika" />
+    <edge source="Stránská Valerie" target="Cihlář Jakub" />
+    <edge source="Stránská Valerie" target="Otová Tereza" />
+    <edge source="Stránská Valerie" target="Hoznourová Stela" />
+    <edge source="Šafář David" target="Šubrt Antonín" />
+    <edge source="Šafářová Sofie" target="Karásková Laura" />
+    <edge source="Šafářová Sofie" target="Samcova Tereza" />
+    <edge source="Šafářová Sofie" target="Muzikářová Adéla" />
+    <edge source="Šikýř Ondřej" target="Voldán Lukáš" />
+    <edge source="Šikýř Ondřej" target="Brablc Bruno" />
+    <edge source="Šikýř Ondřej" target="Valášek Marek" />
+    <edge source="Šikýřová Nela" target="Myrdaczová Anna" />
+    <edge source="Šimková Meda" target="Podlisková Barbora" />
+    <edge source="Šourek Pavel" target="Urbánek David" />
+    <edge source="Šourek Pavel" target="Kudláček Adam" />
+    <edge source="Šourek Pavel" target="Filip Vojtěch" />
+    <edge source="Šourek Pavel" target="Taylor Benjamin William" />
+    <edge source="Šubrt Antonín" target="Šafář David" />
+    <edge source="Taylor Benjamin William" target="Šourek Pavel" />
+    <edge source="Taylor Benjamin William" target="Urbánek David" />
+    <edge source="Vansa Sebastian" target="Fiala Tadeáš" />
+    <edge source="Vlasáková Veronika" target="Hurinová Klára" />
+    <edge source="Vlasáková Veronika" target="Otová Tereza" />
+    <edge source="Vlasáková Veronika" target="Hoznourová Stela" />
+    <edge source="Vlasáková Veronika" target="Stránská Valerie" />
+    <edge source="Vlasáková Veronika" target="Cihlářová Kristina" />
+    <edge source="Voldán Lukáš" target="Brablc Bruno" />
+    <edge source="Wasserburger Anna" target="Šafářová Sofie" />
+    <edge source="Wasserburger Anna" target="Klímová Karolína" />
+    <edge source="Wasserburger Sofie" target="Wasserburger Anna" />
+    <edge source="Wasserburger Sofie" target="Šafářová Sofie" />
+    <edge source="Wasserburger Sofie" target="Klímová Karolína" />
+    <edge source="Záveská Aneta" target="Provázek David" />
+    <edge source="Zhejbalová Aneta" target="Podlisková Barbora" />
+    <edge source="Zhejbalová Aneta" target="Šimková Meda" />
+  </graph>
+</graphml>

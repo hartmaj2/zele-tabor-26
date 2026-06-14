@@ -1,0 +1,90 @@
+[
+  {
+    "index": 0,
+    "name": "Age-greedy (baseline)",
+    "assigned": 99,
+    "sat_edges": 52,
+    "total_edges": 157,
+    "pct_edges": 33.1,
+    "with_friend": 45,
+    "pct_friend": 45.5,
+    "mutual_pairs": 15
+  },
+  {
+    "index": 1,
+    "name": "Preference-cluster aware",
+    "assigned": 99,
+    "sat_edges": 87,
+    "total_edges": 157,
+    "pct_edges": 55.4,
+    "with_friend": 62,
+    "pct_friend": 62.6,
+    "mutual_pairs": 28
+  },
+  {
+    "index": 2,
+    "name": "Age-greedy, reversed gender split",
+    "assigned": 99,
+    "sat_edges": 59,
+    "total_edges": 157,
+    "pct_edges": 37.6,
+    "with_friend": 50,
+    "pct_friend": 50.5,
+    "mutual_pairs": 19
+  },
+  {
+    "index": 3,
+    "name": "Preference-cluster, reversed split",
+    "assigned": 99,
+    "sat_edges": 92,
+    "total_edges": 157,
+    "pct_edges": 58.6,
+    "with_friend": 63,
+    "pct_friend": 63.6,
+    "mutual_pairs": 30
+  },
+  {
+    "index": 4,
+    "name": "Age-greedy, shuffle seed 42",
+    "assigned": 99,
+    "sat_edges": 60,
+    "total_edges": 157,
+    "pct_edges": 38.2,
+    "with_friend": 53,
+    "pct_friend": 53.5,
+    "mutual_pairs": 22
+  },
+  {
+    "index": 5,
+    "name": "Age-greedy, shuffle seed 137",
+    "assigned": 99,
+    "sat_edges": 46,
+    "total_edges": 157,
+    "pct_edges": 29.3,
+    "with_friend": 46,
+    "pct_friend": 46.5,
+    "mutual_pairs": 13
+  },
+  {
+    "index": 6,
+    "name": "Preference-cluster, shuffle seed 42",
+    "assigned": 99,
+    "sat_edges": 87,
+    "total_edges": 157,
+    "pct_edges": 55.4,
+    "with_friend": 62,
+    "pct_friend": 62.6,
+    "mutual_pairs": 28
+  },
+  {
+    "index": 7,
+    "name": "Preference-cluster, shuffle seed 137",
+    "assigned": 99,
+    "sat_edges": 87,
+    "total_edges": 157,
+    "pct_edges": 55.4,
+    "with_friend": 62,
+    "pct_friend": 62.6,
+    "mutual_pairs": 28
+  }
+]
