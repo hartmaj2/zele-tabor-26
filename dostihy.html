@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oval Horse Race</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #d8f0ff;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    #raceTrack {
+      position: relative;
+      width: min(1000px, 95vw);
+      aspect-ratio: 2 / 1;
+      margin: 20px auto;
+      border: 8px solid #4f321d;
+      border-radius: 50%;
+      background: #bf8751;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /*
+      The inner field begins at:
+      - 22% from the left and right
+      - 30% from the top and bottom
+    */
+    #innerField {
+      position: absolute;
+      inset: 30% 22%;
+      border: 4px solid white;
+      border-radius: 50%;
+      background: #55a94f;
+      pointer-events: none;
+    }
+
+    .lane-line {
+      position: absolute;
+      border: 2px dashed rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /*
+      These lines divide the area between the outer edge
+      and the inner field into four lanes.
+    */
+    .lane-line-1 {
+      top: 7.5%;
+      bottom: 7.5%;
+      left: 5.5%;
+      right: 5.5%;
+    }
+
+    .lane-line-2 {
+      top: 15%;
+      bottom: 15%;
+      left: 11%;
+      right: 11%;
+    }
+
+    .lane-line-3 {
+      top: 22.5%;
+      bottom: 22.5%;
+      left: 16.5%;
+      right: 16.5%;
+    }
+
+    .finish-line {
+      position: absolute;
+      left: calc(50% - 8px);
+      top: 0;
+      width: 16px;
+      height: 30%;
+      z-index: 2;
+
+      background:
+        repeating-linear-gradient(
+          0deg,
+          black 0 10px,
+          white 10px 20px
+        );
+    }
+
+    .horse {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      border: 2px solid white;
+      border-radius: 50%;
+
+      font-size: 24px;
+      line-height: 1;
+
+      transform-origin: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .red {
+      background: #e53935;
+    }
+
+    .blue {
+      background: #1e88e5;
+    }
+
+    .green {
+      background: #43a047;
+    }
+
+    .yellow {
+      background: #fdd835;
+    }
+
+    #controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    select,
+    button {
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    select {
+      border: 1px solid #777;
+      background: white;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      background: #1769aa;
+      color: white;
+    }
+
+    button:disabled,
+    select:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+    }
+
+    #status {
+      min-height: 30px;
+      margin: 16px 0 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Oval Horse Race</h1>
+
+  <div id="raceTrack">
+    <div class="lane-line lane-line-1"></div>
+    <div class="lane-line lane-line-2"></div>
+    <div class="lane-line lane-line-3"></div>
+
+    <div id="innerField"></div>
+    <div class="finish-line"></div>
+
+    <div class="horse red" data-name="Red">🐎</div>
+    <div class="horse blue" data-name="Blue">🐎</div>
+    <div class="horse green" data-name="Green">🐎</div>
+    <div class="horse yellow" data-name="Yellow">🐎</div>
+  </div>
+
+  <div id="controls">
+    <label for="lapCount">Number of laps:</label>
+
+    <select id="lapCount">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3" selected>3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+
+    <button id="playButton">Play</button>
+    <button id="endButton" disabled>End Race</button>
+  </div>
+
+  <p id="status">Choose the number of laps and start the race.</p>
+
+  <script>
+    const track = document.getElementById("raceTrack");
+    const horseElements = [...document.querySelectorAll(".horse")];
+
+    const playButton = document.getElementById("playButton");
+    const endButton = document.getElementById("endButton");
+    const lapCountSelect = document.getElementById("lapCount");
+    const status = document.getElementById("status");
+
+    const FULL_LAP = 2 * Math.PI;
+    const START_ANGLE = -Math.PI / 2;
+
+    const INNER_INSET_X = 0.22;
+    const INNER_INSET_Y = 0.30;
+    const LANE_COUNT = horseElements.length;
+
+    let totalLaps = 3;
+    let raceRunning = false;
+    let previousTime = 0;
+    let animationId = null;
+
+    const racers = horseElements.map((element, index) => ({
+      element,
+      name: element.dataset.name,
+      laneIndex: index,
+      distance: 0,
+      speed: randomSpeed(),
+      targetSpeed: randomSpeed(),
+      nextSpeedChange: randomSpeedChangeTime()
+    }));
+
+    function randomSpeed() {
+      return 0.22 + Math.random() * 0.15;
+    }
+
+    function randomSpeedChangeTime() {
+      return 600 + Math.random() * 1400;
+    }
+
+    function getLaneGeometry(laneIndex) {
+      const width = track.clientWidth;
+      const height = track.clientHeight;
+
+      /*
+        Position the horse in the centre of its lane.
+
+        For four lanes, lanePosition has the values:
+
+        1/8, 3/8, 5/8, 7/8.
+
+        The result is interpolated between the outer edge
+        and the inner field.
+      */
+      const lanePosition =
+        (laneIndex + 0.5) / LANE_COUNT;
+
+      const insetX =
+        width * INNER_INSET_X * lanePosition;
+
+      const insetY =
+        height * INNER_INSET_Y * lanePosition;
+
+      return {
+        centerX: width / 2,
+        centerY: height / 2,
+        radiusX: width / 2 - insetX,
+        radiusY: height / 2 - insetY
+      };
+    }
+
+    function placeHorse(racer) {
+      const lane = getLaneGeometry(racer.laneIndex);
+      const angle = START_ANGLE + racer.distance;
+
+      const x =
+        lane.centerX +
+        lane.radiusX * Math.cos(angle);
+
+      const y =
+        lane.centerY +
+        lane.radiusY * Math.sin(angle);
+
+      /*
+        Tangent vector of the ellipse:
+
+        x(t) = cx + rx cos(t)
+        y(t) = cy + ry sin(t)
+
+        x'(t) = -rx sin(t)
+        y'(t) =  ry cos(t)
+      */
+      const tangentX =
+        -lane.radiusX * Math.sin(angle);
+
+      const tangentY =
+        lane.radiusY * Math.cos(angle);
+
+      const rotation =
+        Math.atan2(tangentY, tangentX) *
+        180 / Math.PI;
+
+      racer.element.style.left = `${x}px`;
+      racer.element.style.top = `${y}px`;
+
+      /*
+        scaleX(-1) makes the horse face in the
+        opposite direction without turning it upside down.
+      */
+      racer.element.style.transform =
+        `translate(-50%, -50%)
+         rotate(${rotation}deg)
+         scaleX(-1)`;
+    }
+
+    function resetRace() {
+      for (const racer of racers) {
+        racer.distance = 0;
+        racer.speed = randomSpeed();
+        racer.targetSpeed = randomSpeed();
+        racer.nextSpeedChange = randomSpeedChangeTime();
+
+        placeHorse(racer);
+      }
+
+      status.textContent =
+        `${totalLaps}-lap race ready.`;
+
+      endButton.disabled = true;
+    }
+
+    function startRace() {
+      if (raceRunning) {
+        return;
+      }
+
+      totalLaps = Number(lapCountSelect.value);
+
+      resetRace();
+
+      raceRunning = true;
+      playButton.disabled = true;
+      endButton.disabled = false;
+      lapCountSelect.disabled = true;
+
+      previousTime = performance.now();
+      animationId = requestAnimationFrame(updateRace);
+    }
+
+    function updateRace(currentTime) {
+      const deltaSeconds = Math.min(
+        (currentTime - previousTime) / 1000,
+        0.05
+      );
+
+      previousTime = currentTime;
+
+      let winner = null;
+      let leader = racers[0];
+
+      for (const racer of racers) {
+        racer.nextSpeedChange -= deltaSeconds * 1000;
+
+        if (racer.nextSpeedChange <= 0) {
+          racer.targetSpeed = randomSpeed();
+          racer.nextSpeedChange = randomSpeedChangeTime();
+        }
+
+        const accelerationFactor =
+          Math.min(deltaSeconds * 1.4, 1);
+
+        racer.speed +=
+          (racer.targetSpeed - racer.speed) *
+          accelerationFactor;
+
+        racer.distance += racer.speed * deltaSeconds;
+
+        placeHorse(racer);
+
+        if (racer.distance > leader.distance) {
+          leader = racer;
+        }
+
+        if (
+          racer.distance >= totalLaps * FULL_LAP &&
+          winner === null
+        ) {
+          winner = racer;
+        }
+      }
+
+      const leaderLap = Math.min(
+        totalLaps,
+        Math.floor(leader.distance / FULL_LAP) + 1
+      );
+
+      status.textContent =
+        `Lap ${leaderLap} of ${totalLaps} — ` +
+        `${leader.name} is leading`;
+
+      if (winner !== null) {
+        finishRace(winner);
+        return;
+      }
+
+      animationId = requestAnimationFrame(updateRace);
+    }
+
+    function finishRace(winner) {
+      raceRunning = false;
+
+      cancelAnimationFrame(animationId);
+
+      status.textContent =
+        `${winner.name} horse wins after ${totalLaps} ` +
+        `${totalLaps === 1 ? "lap" : "laps"}!`;
+
+      playButton.disabled = false;
+      endButton.disabled = true;
+      lapCountSelect.disabled = false;
+      playButton.textContent = "Race Again";
+    }
+
+    function endRaceImmediately() {
+      if (!raceRunning) {
+        return;
+      }
+
+      let leader = racers[0];
+
+      for (const racer of racers) {
+        if (racer.distance > leader.distance) {
+          leader = racer;
+        }
+      }
+
+      finishRace(leader);
+    }
+
+    playButton.addEventListener("click", startRace);
+    endButton.addEventListener("click", endRaceImmediately);
+
+    lapCountSelect.addEventListener("change", () => {
+      if (!raceRunning) {
+        totalLaps = Number(lapCountSelect.value);
+        resetRace();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      for (const racer of racers) {
+        placeHorse(racer);
+      }
+    });
+
+    resetRace();
+  </script>
+</body>
+</html>
