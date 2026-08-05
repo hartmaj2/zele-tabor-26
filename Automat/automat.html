@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hrací automat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      text-align: center;
+      background: radial-gradient(circle at top, #3a2450, #180d24 70%);
+      color: #fbe9c8;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 40px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 0 #000, 0 0 18px #ffcf5c;
+      color: #ffcf5c;
+    }
+
+    .subtitle {
+      margin: 0 0 20px;
+      opacity: 0.8;
+    }
+
+    #machine {
+      display: inline-block;
+      padding: 26px 26px 20px;
+      border-radius: 24px;
+      background: linear-gradient(#7b1e2b, #4a0f18);
+      border: 6px solid #ffcf5c;
+      box-shadow:
+        0 0 0 4px #5a121c,
+        0 18px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    #reels {
+      display: flex;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #120a1c;
+      border: 4px solid #2a1740;
+      box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.8);
+    }
+
+    .reel {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #fdf3df;
+      box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.35);
+    }
+
+    /*
+      The payline highlight sits over the centre cell of every reel.
+    */
+    #reels::after {
+      content: "";
+    }
+
+    .reel-strip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      will-change: transform;
+    }
+
+    .reel-cell {
+      width: 120px;
+      height: 120px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 120px;
+    }
+
+    .reel-cell img {
+      width: 108px;
+      height: 108px;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    .payline {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      top: 50%;
+      height: 3px;
+      transform: translateY(-50%);
+      background: rgba(255, 60, 60, 0.7);
+      box-shadow: 0 0 10px rgba(255, 60, 60, 0.8);
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    #controls {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+    }
+
+    button {
+      padding: 14px 34px;
+      border: none;
+      border-radius: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      color: #3a2007;
+      background: linear-gradient(#ffe08a, #ffb52e);
+      box-shadow: 0 6px 0 #b9791a, 0 8px 14px rgba(0, 0, 0, 0.4);
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #b9791a, 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+    }
+
+    #status {
+      min-height: 34px;
+      margin: 20px auto 0;
+      max-width: 460px;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #000;
+    }
+
+    #status.win {
+      color: #6dffa0;
+    }
+
+    #status.lose {
+      color: #ff9c9c;
+    }
+
+    #status.jackpot {
+      color: #ffd94a;
+      animation: flash 0.4s steps(2, jump-none) 5;
+    }
+
+    @keyframes flash {
+      50% { opacity: 0.4; }
+    }
+
+    #score {
+      margin-top: 8px;
+      font-size: 18px;
+      opacity: 0.85;
+    }
+
+    .legend {
+      margin: 26px auto 0;
+      max-width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 16px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .legend img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HRACÍ AUTOMAT</h1>
+  <p class="subtitle">Roztoč tři válce a slož trojici stejných předmětů!</p>
+
+  <div id="machine">
+    <div id="reels">
+      <div class="payline"></div>
+      <div class="reel"><div class="reel-strip" data-reel="0"></div></div>
+      <div class="reel"><div class="reel-strip" data-reel="1"></div></div>
+      <div class="reel"><div class="reel-strip" data-reel="2"></div></div>
+    </div>
+
+    <div id="controls">
+      <button id="spinButton">ROZTOČIT</button>
+    </div>
+  </div>
+
+  <p id="status">Zmáčkni ROZTOČIT a zkus štěstí.</p>
+  <p id="score">Výher celkem: <span id="totalPrize">0</span></p>
+
+  <div class="legend" id="legend"></div>
+
+  <script>
+    const IMG_DIR = "";
+
+    /*
+      Each symbol has a prize value between 1 and 5 and a weight.
+      Higher prizes are rarer (smaller weight), so most wins are small.
+    */
+    const SYMBOLS = [
+      { file: "zebrik.png",           name: "Žebřík",           prize: 1, weight: 10 },
+      { file: "obvazy.png",           name: "Obvazy",           prize: 1, weight: 10 },
+      { file: "batoh.png",            name: "Batoh",            prize: 2, weight: 8 },
+      { file: "laso.png",             name: "Laso",             prize: 2, weight: 8 },
+      { file: "dortik.png",           name: "Dortík",           prize: 3, weight: 6 },
+      { file: "pouta.png",            name: "Pouta",            prize: 3, weight: 6 },
+      { file: "stit.png",             name: "Štít",             prize: 4, weight: 4 },
+      { file: "zrcatko.png",          name: "Zrcátko",          prize: 4, weight: 4 },
+      { file: "valecny_buben.png",    name: "Válečný buben",    prize: 5, weight: 2 },
+      { file: "kralovsky_rozkaz.png", name: "Královský rozkaz", prize: 5, weight: 1 }
+    ];
+
+    /* Chance that a single spin is a winning (three-of-a-kind) spin. */
+    const WIN_CHANCE = 0.4;
+
+    /* How many symbols scroll past before a reel settles on its result. */
+    const STRIP_LENGTH = 30;
+    const CELL_SIZE = 120;
+
+    const reelStrips = [...document.querySelectorAll(".reel-strip")];
+    const spinButton = document.getElementById("spinButton");
+    const status = document.getElementById("status");
+    const totalPrizeEl = document.getElementById("totalPrize");
+    const legend = document.getElementById("legend");
+
+    let spinning = false;
+    let totalPrize = 0;
+
+    function randomSymbol() {
+      return SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
+    }
+
+    function weightedSymbol() {
+      const total = SYMBOLS.reduce((sum, s) => sum + s.weight, 0);
+      let roll = Math.random() * total;
+
+      for (const symbol of SYMBOLS) {
+        roll -= symbol.weight;
+        if (roll <= 0) {
+          return symbol;
+        }
+      }
+
+      return SYMBOLS[SYMBOLS.length - 1];
+    }
+
+    function makeCell(symbol) {
+      const cell = document.createElement("div");
+      cell.className = "reel-cell";
+
+      const img = document.createElement("img");
+      img.src = IMG_DIR + symbol.file;
+      img.alt = symbol.name;
+
+      cell.appendChild(img);
+      return cell;
+    }
+
+    /*
+      Build a tall strip of random symbols whose LAST cell is `finalSymbol`.
+      The strip is positioned so that the final cell sits on the payline.
+    */
+    function buildStrip(strip, finalSymbol) {
+      strip.innerHTML = "";
+
+      for (let i = 0; i < STRIP_LENGTH - 1; i++) {
+        strip.appendChild(makeCell(randomSymbol()));
+      }
+      strip.appendChild(makeCell(finalSymbol));
+
+      strip.style.transition = "none";
+      strip.style.transform = "translateY(0px)";
+    }
+
+    function decideResult() {
+      const isWin = Math.random() < WIN_CHANCE;
+
+      if (isWin) {
+        const symbol = weightedSymbol();
+        return [symbol, symbol, symbol];
+      }
+
+      /* Losing spin: pick three symbols that are not all identical. */
+      let result;
+      do {
+        result = [randomSymbol(), randomSymbol(), randomSymbol()];
+      } while (result[0] === result[1] && result[1] === result[2]);
+
+      return result;
+    }
+
+    function spin() {
+      if (spinning) {
+        return;
+      }
+
+      spinning = true;
+      spinButton.disabled = true;
+      status.className = "";
+      status.textContent = "Válce se točí…";
+
+      const result = decideResult();
+
+      /* Distance so the final cell (the result) lands on the centre payline. */
+      const finalOffset = -((STRIP_LENGTH - 1) * CELL_SIZE);
+
+      reelStrips.forEach((strip, index) => {
+        buildStrip(strip, result[index]);
+
+        /* Force layout so the reset transform applies before animating. */
+        void strip.offsetHeight;
+
+        const duration = 1.6 + index * 0.5;
+
+        strip.style.transition =
+          `transform ${duration}s cubic-bezier(0.15, 0.85, 0.25, 1)`;
+        strip.style.transform = `translateY(${finalOffset}px)`;
+      });
+
+      const totalDuration = (1.6 + (reelStrips.length - 1) * 0.5) * 1000;
+
+      setTimeout(() => finishSpin(result), totalDuration + 100);
+    }
+
+    function finishSpin(result) {
+      spinning = false;
+      spinButton.disabled = false;
+
+      const allSame =
+        result[0] === result[1] && result[1] === result[2];
+
+      if (allSame) {
+        const prize = result[0].prize;
+        totalPrize += prize;
+        totalPrizeEl.textContent = totalPrize;
+
+        if (prize === 5) {
+          status.className = "jackpot";
+          status.textContent =
+            `JACKPOT! ${result[0].name} × 3 → výhra ${prize}!`;
+        } else {
+          status.className = "win";
+          status.textContent =
+            `Výhra! ${result[0].name} × 3 → ${prize} ` +
+            `${prizeWord(prize)}.`;
+        }
+      } else {
+        status.className = "lose";
+        status.textContent = "Bohužel nic. Zkus to znovu!";
+      }
+    }
+
+    function prizeWord(prize) {
+      if (prize === 1) return "koiník";
+      if (prize >= 2 && prize <= 4) return "koiníky";
+      return "koiníků";
+    }
+
+    function buildLegend() {
+      const sorted = [...SYMBOLS].sort((a, b) => a.prize - b.prize);
+
+      for (const symbol of sorted) {
+        const item = document.createElement("div");
+
+        const img = document.createElement("img");
+        img.src = IMG_DIR + symbol.file;
+        img.alt = symbol.name;
+
+        const label = document.createElement("span");
+        label.textContent = `${symbol.name} — ${symbol.prize}`;
+
+        item.appendChild(img);
+        item.appendChild(label);
+        legend.appendChild(item);
+      }
+    }
+
+    /* Show a starting symbol in each reel before the first spin. */
+    function initReels() {
+      reelStrips.forEach((strip) => {
+        strip.innerHTML = "";
+        strip.appendChild(makeCell(randomSymbol()));
+        strip.style.transform = "translateY(0px)";
+      });
+    }
+
+    spinButton.addEventListener("click", spin);
+
+    buildLegend();
+    initReels();
+  </script>
+</body>
+</html>
