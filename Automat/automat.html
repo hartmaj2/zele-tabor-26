@@ -98,16 +98,7 @@
     }
 
     .payline {
-      position: absolute;
-      left: 8px;
-      right: 8px;
-      top: 50%;
-      height: 3px;
-      transform: translateY(-50%);
-      background: rgba(255, 60, 60, 0.7);
-      box-shadow: 0 0 10px rgba(255, 60, 60, 0.8);
-      pointer-events: none;
-      z-index: 5;
+      display: none;
     }
 
     #controls {
@@ -208,7 +199,6 @@
 
   <div id="machine">
     <div id="reels">
-      <div class="payline"></div>
       <div class="reel"><div class="reel-strip" data-reel="0"></div></div>
       <div class="reel"><div class="reel-strip" data-reel="1"></div></div>
       <div class="reel"><div class="reel-strip" data-reel="2"></div></div>
